@@ -1,3 +1,7 @@
-<p>
-  contact-list works!
-</p>
+<ul class="contact-list">
+  <li *ngFor="let contact of contacts">
+    <h3>{{ contact.first_name }} {{ contact.last_name }}</h3>
+    <a [href]="'mailto:' + contact.email">{{ contact.email }}</a><br>
+    {{ contact.phone }}
+  </li>
+</ul>

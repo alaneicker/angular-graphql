@@ -12,14 +12,15 @@ import { Contact, Query } from '../interfaces';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-  contacts: Observable<Contact[]>;
+  contacts: Contact[];
 
   constructor(private apollo: Apollo) { }
 
   ngOnInit() {
-    this.contacts = this.apollo.watchQuery<Query>({
+
+    this.apollo.query({
       query: gql`
-        query {
+        query allContacts {
           allContacts {
             id
             first_name
@@ -29,11 +30,9 @@ export class ContactListComponent implements OnInit {
           }
         }
       `
-    })
-      .valueChanges
-      .pipe(
-        map(result => result.data.allContacts)
-      );
+    }).subscribe(result => {
+      this.contacts = result.data.allContacts;
+    });
   }
 
 }
