@@ -1,12 +1,29 @@
 <div class="contacts">
-  <div class="contact__menu">
-    <ul class="contact-list">
+  <div class="ccontacts__menu">
+    <ul class="contacts__list">
       <li *ngFor="let contact of contactNames">
-        <button (click)="getContact(contact.id)">{{ contact.first_name }} {{ contact.last_name }}</button>
+        <button 
+          (click)="getContact(contact.id)" 
+          [class.is-selected]="selectedContactId == contact.id">
+            {{ contact.first_name }} {{ contact.last_name }}
+        </button>
       </li>
     </ul>
   </div>
-  <div class="contact__detail">
-    <h1>{{ selectedContact.first_name }} {{ selectedContact.last_name }}</h1>
+  <div class="contacts__detail">
+    <div class="contacts__profile-image">
+      <img 
+        [src]="selectedContact.imgUrl" 
+        [alt]="selectedContact.first_name + ' ' + selectedContact.last_name">
+    </div>
+    <div class="contacts__profile-content">
+      <h1>{{ selectedContact.first_name }} {{ selectedContact.last_name }}</h1>
+      <h2>{{ selectedContact.jobTitle }}</h2>
+      <div>{{ selectedContact.phone }}</div>
+      <div>
+        <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
+      </div>
+      <p>{{ selectedContact.bio }}</p>
+    </div>
   </div>
 </div>

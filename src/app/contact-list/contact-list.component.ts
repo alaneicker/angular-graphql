@@ -9,11 +9,12 @@ import { Contact, Query } from '../interfaces';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.css']
+  styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
   contactNames: Contact[];
   selectedContact: Contact;
+  selectedContactId: number;
 
   constructor(private apollo: Apollo) { }
 
@@ -22,7 +23,7 @@ export class ContactListComponent implements OnInit {
     this.getContact(1);
   }
 
-  getContactNames() {
+  async getContactNames() {
     this.apollo.query({
       query: gql`
         query allContacts {
@@ -33,25 +34,30 @@ export class ContactListComponent implements OnInit {
           }
         }
       `
-    }).subscribe(result => {
+    }).subscribe((result: any) => {
       this.contactNames = result.data.allContacts;
     });
   }
 
   // Gets single contact by ID
   getContact(id: number) {
+    this.selectedContactId = id;
+
     this.apollo.query({
       query: gql`
         query {
           contact(id: ${id}) {
             first_name
             last_name
+            jobTitle
             email
             phone
+            bio
+            imgUrl
           }
         }
       `
-    }).subscribe(result => {
+    }).subscribe((result: any) => {
       this.selectedContact = result.data.contact;
     });
   }
