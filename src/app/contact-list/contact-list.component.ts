@@ -12,29 +12,17 @@ import { Contact, Query } from '../interfaces';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-  contacts: Contact[];
+  contactNames: Contact[];
+  selectedContact: Contact;
 
   constructor(private apollo: Apollo) { }
 
   ngOnInit() {
+    this.getContactNames();
+    this.getContact(1);
+  }
 
-    // Gets contact by ID
-    this.apollo.query({
-      query: gql`
-        query {
-          contact(id: 1) {
-            first_name
-            last_name
-            email
-            phone
-          }
-        }
-      `
-    }).subscribe(result => {
-      console.log(result.data.contact);
-    });
-
-    // Gets All contacts
+  getContactNames() {
     this.apollo.query({
       query: gql`
         query allContacts {
@@ -42,13 +30,29 @@ export class ContactListComponent implements OnInit {
             id
             first_name
             last_name
+          }
+        }
+      `
+    }).subscribe(result => {
+      this.contactNames = result.data.allContacts;
+    });
+  }
+
+  // Gets single contact by ID
+  getContact(id: number) {
+    this.apollo.query({
+      query: gql`
+        query {
+          contact(id: ${id}) {
+            first_name
+            last_name
             email
             phone
           }
         }
       `
     }).subscribe(result => {
-      this.contacts = result.data.allContacts;
+      this.selectedContact = result.data.contact;
     });
   }
 

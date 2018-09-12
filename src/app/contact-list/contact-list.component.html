@@ -1,7 +1,12 @@
-<ul class="contact-list">
-  <li *ngFor="let contact of contacts">
-    <h3>{{ contact.first_name }} {{ contact.last_name }}</h3>
-    <a [href]="'mailto:' + contact.email">{{ contact.email }}</a><br>
-    {{ contact.phone }}
-  </li>
-</ul>
+<div class="contacts">
+  <div class="contact__menu">
+    <ul class="contact-list">
+      <li *ngFor="let contact of contactNames">
+        <button (click)="getContact(contact.id)">{{ contact.first_name }} {{ contact.last_name }}</button>
+      </li>
+    </ul>
+  </div>
+  <div class="contact__detail">
+    <h1>{{ selectedContact.first_name }} {{ selectedContact.last_name }}</h1>
+  </div>
+</div>
