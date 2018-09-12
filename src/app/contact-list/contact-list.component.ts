@@ -15,6 +15,7 @@ export class ContactListComponent implements OnInit {
   contactNames: Contact[];
   selectedContact: Contact;
   selectedContactId: number;
+  loading: boolean;
 
   constructor(private apollo: Apollo) { }
 
@@ -39,8 +40,8 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  // Gets single contact by ID
   getContact(id: number) {
+    this.loading = true;
     this.selectedContactId = id;
 
     this.apollo.query({
@@ -59,6 +60,7 @@ export class ContactListComponent implements OnInit {
       `
     }).subscribe((result: any) => {
       this.selectedContact = result.data.contact;
+      this.loading = false;
     });
   }
 
