@@ -18,6 +18,23 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit() {
 
+    // Gets contact by ID
+    this.apollo.query({
+      query: gql`
+        query {
+          contact(id: 1) {
+            first_name
+            last_name
+            email
+            phone
+          }
+        }
+      `
+    }).subscribe(result => {
+      console.log(result.data.contact);
+    });
+
+    // Gets All contacts
     this.apollo.query({
       query: gql`
         query allContacts {
