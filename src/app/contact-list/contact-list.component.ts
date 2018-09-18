@@ -21,7 +21,13 @@ export class ContactListComponent implements OnInit {
     this.getContact(1);
   }
 
+  // Unlike RESTful APIs, which return the entire resource whether
+  // needed or not, GraphQL allows the client to determine what
+  // data is needed and sent back with the request.
+
   getContactNames() {
+
+    // This query is equivalent to `/contacts`
     this.queryService.query(`
       query allContacts {
         allContacts {
@@ -39,6 +45,7 @@ export class ContactListComponent implements OnInit {
     this.loading = true;
     this.selectedContactId = id;
 
+    // This query is equivalent to `/contact/1`
     this.queryService.query(`
       query {
         contact(id: ${id}) {
