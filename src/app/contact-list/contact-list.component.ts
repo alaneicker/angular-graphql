@@ -69,6 +69,21 @@ export class ContactListComponent implements OnInit {
         this.selectedContact = res.data.contact;
         this.loading = false;
       });
-    }
+  }
+
+  // TODO: Create Contact
+  createContact() {
+
+  }
+
+  // TODO: Update Contact
+  updateContact(id: number) {
+
+  }
+
+  // TODO: Delete Contact
+  deleteContact(id: number) {
+
+  }
 
 }
