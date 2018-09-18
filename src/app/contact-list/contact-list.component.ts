@@ -23,7 +23,7 @@ export class ContactListComponent implements OnInit {
 
   // Unlike RESTful APIs, which return the entire resource whether
   // needed or not, GraphQL allows the client to determine what
-  // data is needed and sent back with the request.
+  // data is needed to be sent back with the request.
 
   getAllContactNames() {
 
