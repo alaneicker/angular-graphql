@@ -26,10 +26,10 @@
     <h2>{{ selectedContact.jobTitle }}</h2>
     <div>
       {{ selectedContact.address.addr1 }} 
-      <span *ngIf="selectedContact.address.addr2.type">
+      <ng-container *ngIf="selectedContact.address.addr2.type">
         {{ selectedContact.address.addr2.type }} 
         {{ selectedContact.address.addr2.identifier }}, 
-      </span>
+      </ng-container>
       {{ selectedContact.address.city }}, 
       {{ selectedContact.address.state }} 
       {{ selectedContact.address.zip }}
