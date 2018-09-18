@@ -7,8 +7,11 @@
         "email": "alaneicker@gmail.com",
         "phone": "(224) 555-1234",
         "address": {
-            "street": "555 Chatham Cir",
-            "unit": "2",
+            "addr1": "555 Chatham Cir",
+            "addr2": {
+                "type": "Apt",
+                "identifier": "2B"
+            },
             "city": "Buffalo Grove",
             "state": "IL",
             "zip": "60089"
@@ -24,8 +27,11 @@
         "email": "bbarker@gmail.com",
         "phone": "(312) 555-5678",
         "address": {
-            "street": "555 Chatham Cir",
-            "unit": "2",
+            "addr1": "555 Chatham Cir",
+            "addr2": {
+                "type": "Apt",
+                "identifier": "2B"
+            },
             "city": "Buffalo Grove",
             "state": "IL",
             "zip": "60089"
@@ -41,8 +47,11 @@
         "email": "j_hetfield@homail.com",
         "phone": "(773) 555-2000",
         "address": {
-            "street": "555 Chatham Cir",
-            "unit": "2",
+            "addr1": "555 Chatham Cir",
+            "addr2": {
+                "type": "Apt",
+                "identifier": "2B"
+            },
             "city": "Buffalo Grove",
             "state": "IL",
             "zip": "60089"
@@ -58,8 +67,11 @@
         "jobTitle": "Starbucks Barista",
         "phone": "(312) 555-3245",
         "address": {
-            "street": "555 Chatham Cir",
-            "unit": "2",
+            "addr1": "555 Chatham Cir",
+            "addr2": {
+                "type": "Apt",
+                "identifier": "2B"
+            },
             "city": "Buffalo Grove",
             "state": "IL",
             "zip": "60089"
@@ -75,8 +87,11 @@
         "jobTitle": "Web Designer",
         "phone": "(847) 555-2100",
         "address": {
-            "street": "555 Chatham Cir",
-            "unit": "2",
+            "addr1": "555 Chatham Cir",
+            "addr2": {
+                "type": "Apt",
+                "identifier": "2B"
+            },
             "city": "Buffalo Grove",
             "state": "IL",
             "zip": "60089"

@@ -30,19 +30,27 @@ module.exports = `
         address: Address
         bio: String
         imgUrl: String
-    },
+    }
     type Address {
-        street: String
-        unit: String
-        city: String
-        state: String
-        zip: String
-    },
-    input AddressInput {
-        street: String
-        unit: String
+        addr1: String
+        addr2: Addr2
         city: String
         state: String
         zip: String
     }
+    type Addr2 {
+        type: String
+        identifier: String
+    }
+    input Addr2Input {
+        type: String
+        identifier: String
+    }
+    input AddressInput {
+        addr1: String
+        addr2: Addr2Input
+        city: String
+        state: String
+        zip: String
+    } 
 `;

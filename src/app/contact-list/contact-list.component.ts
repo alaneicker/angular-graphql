@@ -57,9 +57,12 @@ export class ContactListComponent implements OnInit {
           bio
           imgUrl
           address {
-            street
+            addr1
+            addr2 {
+              type
+              identifier
+            }
             city
-            unit
             state
             zip
           }
