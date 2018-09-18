@@ -17,7 +17,7 @@ export class ContactListComponent implements OnInit {
   constructor(private queryService: QueryService) { }
 
   ngOnInit() {
-    this.getContactNames();
+    this.getAllContactNames();
     this.getContact(1);
   }
 
@@ -25,7 +25,7 @@ export class ContactListComponent implements OnInit {
   // needed or not, GraphQL allows the client to determine what
   // data is needed and sent back with the request.
 
-  getContactNames() {
+  getAllContactNames() {
 
     // This query is equivalent to `/contacts`
     this.queryService.query(`
