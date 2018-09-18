@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Contact, Query } from '../interfaces';
-
+import { IContact } from '../interfaces/contact.interface';
 import { QueryService } from '../services/query.service';
 
 @Component({
@@ -11,8 +9,8 @@ import { QueryService } from '../services/query.service';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
-  contactNames: Contact[];
-  selectedContact: Contact;
+  contactNames: IContact[];
+  selectedContact: IContact;
   selectedContactId: number;
   loading: boolean;
 
@@ -25,16 +23,16 @@ export class ContactListComponent implements OnInit {
 
   getContactNames() {
     this.queryService.query(`
-        query allContacts {
-          allContacts {
-            id
-            first_name
-            last_name
-          }
+      query allContacts {
+        allContacts {
+          id
+          first_name
+          last_name
         }
-      `).then(res => {
-        this.contactNames = res.data.allContacts;
-      });
+      }
+    `).then(res => {
+      this.contactNames = res.data.allContacts;
+    });
   }
 
   getContact(id: number) {
