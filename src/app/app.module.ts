@@ -29,7 +29,7 @@ export class AppModule {
     httpLink: HttpLink
   ) {
     apollo.create({
-      link: httpLink.create({ uri: 'https://lk074xr50q.lp.gql.zone/graphql'}),
+      link: httpLink.create({ uri: 'http://localhost:4000/graphql'}),
       cache: new InMemoryCache()
     });
   }

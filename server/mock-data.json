@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "first_name": "Alan",
+        "last_name": "Eicker",
+        "jobTitle": "UI Engineer",
+        "email": "alaneicker@gmail.com",
+        "phone": "(224) 555-1234",
+        "address": {
+            "street": "555 Chatham Cir",
+            "unit": "2",
+            "city": "Buffalo Grove",
+            "state": "IL",
+            "zip": "60089"
+        },
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus dui quis tellus eleifend, et cursus erat faucibus. Donec nec sollicitudin orci, sed mattis ipsum. Integer a lorem non erat faucibus porttitor vel varius mauris. Nulla tellus felis, efficitur non eleifend id, sodales non sapien. Donec sagittis nibh et semper sollicitudin. Nullam luctus massa ut tortor dictum iaculis. Fusce elementum libero orci, in commodo nunc maximus eget. Integer vestibulum purus lobortis mauris finibus ultricies. Vestibulum tempus magna vel ullamcorper egestas. Suspendisse hendrerit, libero et aliquet ultricies, dui eros viverra nisl, id semper lorem sapien a tellus. Integer semper semper dolor, a finibus sem convallis nec.",
+        "imgUrl": "https://scontent-ort2-1.cdninstagram.com/vp/9672c9dea32d48b5080ba5a5189f836c/5C2B6AA0/t51.2885-15/e35/10388046_1610330982542097_1420566945_n.jpg"
+    },
+    {
+        "id": 2,
+        "first_name": "Bob",
+        "last_name": "Baker",
+        "jobTitle": "Pencil Pusher",
+        "email": "bbarker@gmail.com",
+        "phone": "(312) 555-5678",
+        "address": {
+            "street": "555 Chatham Cir",
+            "unit": "2",
+            "city": "Buffalo Grove",
+            "state": "IL",
+            "zip": "60089"
+        },
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu euismod ex. Vestibulum tempus felis ut eros suscipit, eget imperdiet nunc blandit. Nullam tincidunt, sapien et laoreet tincidunt, odio est sodales nisi, sed egestas nisi lorem at tortor. Vivamus ac tincidunt dolor. Aliquam erat volutpat. In id felis vitae turpis sollicitudin eleifend. Nunc eget ligula at elit gravida sollicitudin. Suspendisse et dui vel libero dapibus tincidunt ac ut ante. Nullam mollis, lectus eget rutrum venenatis, odio sapien rutrum justo, vel ultricies mi purus quis mauris.",
+        "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=19141&type=square&ts=1509532892453"
+    },
+    {
+        "id": 3,
+        "first_name": "Jame",
+        "last_name": "McCormick",
+        "jobTitle": "Grocery Store Clerk",
+        "email": "j_hetfield@homail.com",
+        "phone": "(773) 555-2000",
+        "address": {
+            "street": "555 Chatham Cir",
+            "unit": "2",
+            "city": "Buffalo Grove",
+            "state": "IL",
+            "zip": "60089"
+        },
+        "bio": "Nam condimentum varius metus vehicula tincidunt. Donec commodo tellus vel rhoncus bibendum. In nunc libero, hendrerit id elit vitae, tincidunt tempus velit. Nam volutpat condimentum mauris varius molestie. Donec quis arcu sed enim consectetur maximus. Cras fermentum, risus ut viverra dapibus, justo velit laoreet enim, eu porta tellus erat ac purus. Donec sodales, erat vel consectetur tempus, risus dolor elementum orci, non blandit velit ipsum at eros. Nullam tincidunt vestibulum nunc, a laoreet nibh pretium eget. Maecenas tristique lacinia neque a facilisis. Proin ac orci et leo suscipit euismod. Donec vel tristique lectus, nec porta nibh. Praesent tempus magna id sem viverra tincidunt.",
+        "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=23625&type=square&ts=1509499551746"
+    },
+    {
+        "id": 4,
+        "first_name": "Greg",
+        "last_name": "Johnson",
+        "email": "g_moyer@yahoo.com",
+        "jobTitle": "Starbucks Barista",
+        "phone": "(312) 555-3245",
+        "address": {
+            "street": "555 Chatham Cir",
+            "unit": "2",
+            "city": "Buffalo Grove",
+            "state": "IL",
+            "zip": "60089"
+        },
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus dui quis tellus eleifend, et cursus erat faucibus. Donec nec sollicitudin orci, sed mattis ipsum. Integer a lorem non erat faucibus porttitor vel varius mauris. Nulla tellus felis, efficitur non eleifend id, sodales non sapien. Donec sagittis nibh et semper sollicitudin. Nullam luctus massa ut tortor dictum iaculis. Fusce elementum libero orci, in commodo nunc maximus eget. Integer vestibulum purus lobortis mauris finibus ultricies. Vestibulum tempus magna vel ullamcorper egestas. Suspendisse hendrerit, libero et aliquet ultricies, dui eros viverra nisl, id semper lorem sapien a tellus. Integer semper semper dolor, a finibus sem convallis nec.",
+        "imgUrl": "https://i.cricketcb.com/stats/img/faceImages/8364.jpg"
+    },
+    {
+        "id": 5,
+        "first_name": "Mary",
+        "last_name": "Smith",
+        "email": "m.dillon@yahoo.com",
+        "jobTitle": "Web Designer",
+        "phone": "(847) 555-2100",
+        "address": {
+            "street": "555 Chatham Cir",
+            "unit": "2",
+            "city": "Buffalo Grove",
+            "state": "IL",
+            "zip": "60089"
+        },
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non tellus et magna pulvinar ultricies. Nullam aliquam eros tellus, ut scelerisque mi hendrerit eget. Nam sit amet nisi gravida, maximus turpis sollicitudin, aliquet sapien. Nulla mi sem, vestibulum et ante at, pretium malesuada orci. Donec aliquam erat nibh, eget dignissim diam tempus eu. Curabitur sed dui sit amet nisl feugiat dapibus sed vitae est. Fusce quis dui nec erat scelerisque eleifend ut sed sem.",
+        "imgUrl": "https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-gabriela-mills-college.jpg"
+    }
+  ]

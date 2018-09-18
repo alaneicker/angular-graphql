@@ -10,6 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "proxy": "http://localhost:4000",
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
@@ -26,8 +27,12 @@
     "apollo-cache-inmemory": "^1.2.10",
     "apollo-client": "^2.4.2",
     "core-js": "^2.4.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.9.2",
+    "graphql-tools": "^3.1.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.14"
   },
@@ -48,6 +53,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "nodemon": "^1.18.4",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
