@@ -17,11 +17,11 @@ export class QueryService {
         .catch(this.handleError);
     }
 
-    handleSuccess(res: any) {
+    private handleSuccess(res: any) {
         return res || {};
     }
 
-    handleError(error: any): Promise<any> {
+    private handleError(error: any): Promise<any> {
         console.error('An error occurred:', error);
         return Promise.reject(error.message || error);
     }
