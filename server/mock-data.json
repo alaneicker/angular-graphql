@@ -27,13 +27,13 @@
         "email": "bbarker@gmail.com",
         "phone": "(312) 555-5678",
         "address": {
-            "addr1": "555 Chatham Cir",
+            "addr1": "3432 Folsom St",
             "addr2": {
-                "type": "Apt",
-                "identifier": "2B"
+                "type": "Unit",
+                "identifier": "205"
             },
-            "city": "Buffalo Grove",
-            "state": "IL",
+            "city": "San Francisco",
+            "state": "CA",
             "zip": "60089"
         },
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu euismod ex. Vestibulum tempus felis ut eros suscipit, eget imperdiet nunc blandit. Nullam tincidunt, sapien et laoreet tincidunt, odio est sodales nisi, sed egestas nisi lorem at tortor. Vivamus ac tincidunt dolor. Aliquam erat volutpat. In id felis vitae turpis sollicitudin eleifend. Nunc eget ligula at elit gravida sollicitudin. Suspendisse et dui vel libero dapibus tincidunt ac ut ante. Nullam mollis, lectus eget rutrum venenatis, odio sapien rutrum justo, vel ultricies mi purus quis mauris.",
@@ -47,14 +47,14 @@
         "email": "j_hetfield@homail.com",
         "phone": "(773) 555-2000",
         "address": {
-            "addr1": "555 Chatham Cir",
+            "addr1": "312 Main St",
             "addr2": {
-                "type": "Apt",
-                "identifier": "2B"
+                "type": null,
+                "identifier": null
             },
-            "city": "Buffalo Grove",
+            "city": "Evanston",
             "state": "IL",
-            "zip": "60089"
+            "zip": "60602"
         },
         "bio": "Nam condimentum varius metus vehicula tincidunt. Donec commodo tellus vel rhoncus bibendum. In nunc libero, hendrerit id elit vitae, tincidunt tempus velit. Nam volutpat condimentum mauris varius molestie. Donec quis arcu sed enim consectetur maximus. Cras fermentum, risus ut viverra dapibus, justo velit laoreet enim, eu porta tellus erat ac purus. Donec sodales, erat vel consectetur tempus, risus dolor elementum orci, non blandit velit ipsum at eros. Nullam tincidunt vestibulum nunc, a laoreet nibh pretium eget. Maecenas tristique lacinia neque a facilisis. Proin ac orci et leo suscipit euismod. Donec vel tristique lectus, nec porta nibh. Praesent tempus magna id sem viverra tincidunt.",
         "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=23625&type=square&ts=1509499551746"
@@ -67,14 +67,14 @@
         "jobTitle": "Starbucks Barista",
         "phone": "(312) 555-3245",
         "address": {
-            "addr1": "555 Chatham Cir",
+            "addr1": "1973 W Devon",
             "addr2": {
-                "type": "Apt",
-                "identifier": "2B"
+                "type": null,
+                "identifier": null
             },
-            "city": "Buffalo Grove",
+            "city": "Chicago",
             "state": "IL",
-            "zip": "60089"
+            "zip": "60631"
         },
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus dui quis tellus eleifend, et cursus erat faucibus. Donec nec sollicitudin orci, sed mattis ipsum. Integer a lorem non erat faucibus porttitor vel varius mauris. Nulla tellus felis, efficitur non eleifend id, sodales non sapien. Donec sagittis nibh et semper sollicitudin. Nullam luctus massa ut tortor dictum iaculis. Fusce elementum libero orci, in commodo nunc maximus eget. Integer vestibulum purus lobortis mauris finibus ultricies. Vestibulum tempus magna vel ullamcorper egestas. Suspendisse hendrerit, libero et aliquet ultricies, dui eros viverra nisl, id semper lorem sapien a tellus. Integer semper semper dolor, a finibus sem convallis nec.",
         "imgUrl": "https://i.cricketcb.com/stats/img/faceImages/8364.jpg"
@@ -87,14 +87,14 @@
         "jobTitle": "Web Designer",
         "phone": "(847) 555-2100",
         "address": {
-            "addr1": "555 Chatham Cir",
+            "addr1": "525 W Talcott",
             "addr2": {
                 "type": "Apt",
-                "identifier": "2B"
+                "identifier": "5"
             },
-            "city": "Buffalo Grove",
+            "city": "Park Ridge",
             "state": "IL",
-            "zip": "60089"
+            "zip": "60068"
         },
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non tellus et magna pulvinar ultricies. Nullam aliquam eros tellus, ut scelerisque mi hendrerit eget. Nam sit amet nisi gravida, maximus turpis sollicitudin, aliquet sapien. Nulla mi sem, vestibulum et ante at, pretium malesuada orci. Donec aliquam erat nibh, eget dignissim diam tempus eu. Curabitur sed dui sit amet nisl feugiat dapibus sed vitae est. Fusce quis dui nec erat scelerisque eleifend ut sed sem.",
         "imgUrl": "https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-gabriela-mills-college.jpg"
