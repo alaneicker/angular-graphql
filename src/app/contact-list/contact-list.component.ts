@@ -49,6 +49,13 @@ export class ContactListComponent implements OnInit {
           phone
           bio
           imgUrl
+          address {
+            street
+            city
+            unit
+            state
+            zip
+          }
         }
       }
     `).then(res => {
