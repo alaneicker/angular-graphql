@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "first_name": "Alan",
-        "last_name": "Eicker",
+        "first_name": "Stewart",
+        "last_name": "Thompson",
         "jobTitle": "UI Engineer",
-        "email": "alaneicker@gmail.com",
+        "email": "stu_thomson@gmail.com",
         "phone": "(224) 555-1234",
         "address": {
-            "addr1": "555 Chatham Cir",
+            "addr1": "585 Estate Drive",
             "addr2": {
                 "type": "Apt",
                 "identifier": "2B"
@@ -16,7 +16,7 @@
             "state": "IL",
             "zip": "60089"
         },
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus dui quis tellus eleifend, et cursus erat faucibus. Donec nec sollicitudin orci, sed mattis ipsum. Integer a lorem non erat faucibus porttitor vel varius mauris. Nulla tellus felis, efficitur non eleifend id, sodales non sapien. Donec sagittis nibh et semper sollicitudin. Nullam luctus massa ut tortor dictum iaculis. Fusce elementum libero orci, in commodo nunc maximus eget. Integer vestibulum purus lobortis mauris finibus ultricies. Vestibulum tempus magna vel ullamcorper egestas. Suspendisse hendrerit, libero et aliquet ultricies, dui eros viverra nisl, id semper lorem sapien a tellus. Integer semper semper dolor, a finibus sem convallis nec.",
+        "bio": "Award-winning creator. Friendly internet fanatic. Hardcore communicator. Alcohol expert. Food guru.",
         "imgUrl": "https://scontent-ort2-1.cdninstagram.com/vp/9672c9dea32d48b5080ba5a5189f836c/5C2B6AA0/t51.2885-15/e35/10388046_1610330982542097_1420566945_n.jpg"
     },
     {
@@ -36,14 +36,14 @@
             "state": "CA",
             "zip": "60089"
         },
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu euismod ex. Vestibulum tempus felis ut eros suscipit, eget imperdiet nunc blandit. Nullam tincidunt, sapien et laoreet tincidunt, odio est sodales nisi, sed egestas nisi lorem at tortor. Vivamus ac tincidunt dolor. Aliquam erat volutpat. In id felis vitae turpis sollicitudin eleifend. Nunc eget ligula at elit gravida sollicitudin. Suspendisse et dui vel libero dapibus tincidunt ac ut ante. Nullam mollis, lectus eget rutrum venenatis, odio sapien rutrum justo, vel ultricies mi purus quis mauris.",
+        "bio": "Amateur social media fanatic. Typical travel advocate. Internet fan. Proud web lover. Passionate food nerd. Friendly gamer. Wannabe zombie practitioner.",
         "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=19141&type=square&ts=1509532892453"
     },
     {
         "id": 3,
         "first_name": "Jame",
         "last_name": "McCormick",
-        "jobTitle": "Grocery Store Clerk",
+        "jobTitle": "Zombie Enthusiast",
         "email": "j_hetfield@homail.com",
         "phone": "(773) 555-2000",
         "address": {
@@ -56,7 +56,7 @@
             "state": "IL",
             "zip": "60602"
         },
-        "bio": "Nam condimentum varius metus vehicula tincidunt. Donec commodo tellus vel rhoncus bibendum. In nunc libero, hendrerit id elit vitae, tincidunt tempus velit. Nam volutpat condimentum mauris varius molestie. Donec quis arcu sed enim consectetur maximus. Cras fermentum, risus ut viverra dapibus, justo velit laoreet enim, eu porta tellus erat ac purus. Donec sodales, erat vel consectetur tempus, risus dolor elementum orci, non blandit velit ipsum at eros. Nullam tincidunt vestibulum nunc, a laoreet nibh pretium eget. Maecenas tristique lacinia neque a facilisis. Proin ac orci et leo suscipit euismod. Donec vel tristique lectus, nec porta nibh. Praesent tempus magna id sem viverra tincidunt.",
+        "bio": "Professional zombie enthusiast. Hipster-friendly writer. Infuriatingly humble communicator. Freelance beer nerd. Evil web fanatic. Creator.",
         "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=23625&type=square&ts=1509499551746"
     },
     {
@@ -76,7 +76,7 @@
             "state": "IL",
             "zip": "60631"
         },
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus dui quis tellus eleifend, et cursus erat faucibus. Donec nec sollicitudin orci, sed mattis ipsum. Integer a lorem non erat faucibus porttitor vel varius mauris. Nulla tellus felis, efficitur non eleifend id, sodales non sapien. Donec sagittis nibh et semper sollicitudin. Nullam luctus massa ut tortor dictum iaculis. Fusce elementum libero orci, in commodo nunc maximus eget. Integer vestibulum purus lobortis mauris finibus ultricies. Vestibulum tempus magna vel ullamcorper egestas. Suspendisse hendrerit, libero et aliquet ultricies, dui eros viverra nisl, id semper lorem sapien a tellus. Integer semper semper dolor, a finibus sem convallis nec.",
+        "bio": "Wannabe entrepreneur. Zombie geek. Freelance alcohol fanatic. Twitter fanatic. Typical bacon fan.",
         "imgUrl": "https://i.cricketcb.com/stats/img/faceImages/8364.jpg"
     },
     {
@@ -96,7 +96,7 @@
             "state": "IL",
             "zip": "60068"
         },
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non tellus et magna pulvinar ultricies. Nullam aliquam eros tellus, ut scelerisque mi hendrerit eget. Nam sit amet nisi gravida, maximus turpis sollicitudin, aliquet sapien. Nulla mi sem, vestibulum et ante at, pretium malesuada orci. Donec aliquam erat nibh, eget dignissim diam tempus eu. Curabitur sed dui sit amet nisl feugiat dapibus sed vitae est. Fusce quis dui nec erat scelerisque eleifend ut sed sem.",
+        "bio": "Infuriatingly humble creator. Travel maven. Food trailblazer. Unapologetic thinker. Extreme music ninja. Tv specialist.",
         "imgUrl": "https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-gabriela-mills-college.jpg"
     }
   ]
