@@ -1,14 +1,15 @@
 <div class="contacts">
-  <div class="ccontacts__menu">
-    <ul class="contacts__list">
-      <li *ngFor="let contact of contactNames">
-        <button 
-          (click)="getContact(contact.id)" 
-          [class.is-selected]="selectedContactId == contact.id">
+  <div class="contacts__header">
+    <div  class="contacts__title">
+      My Contacts
+    </div>
+    <div class="contacts__dropdown">
+        <select (change)="getContact($event)">
+          <option *ngFor="let contact of contactNames" [value]="contact.id">
             {{ contact.first_name }} {{ contact.last_name }}
-        </button>
-      </li>
-    </ul>
+          </option>
+        </select>
+      </div>
   </div>
   <div class="contacts__detail">
     <ng-container *ngIf="loading; else contact">Loading...</ng-container>

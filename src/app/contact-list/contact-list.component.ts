@@ -18,7 +18,7 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllContactNames();
-    this.getContact(1);
+    this.getContact();
   }
 
   // Unlike RESTful APIs, which return the entire resource whether
@@ -41,14 +41,14 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  getContact(id: number) {
+  getContact(e?) {
     this.loading = true;
-    this.selectedContactId = id;
+    this.selectedContactId = typeof e !== 'undefined' ? e.target.value : 1;
 
     // This query is equivalent to `/contact/1`
     this.queryService.query(`
       query {
-        contact(id: ${id}) {
+        contact(id: ${this.selectedContactId}) {
           first_name
           last_name
           jobTitle

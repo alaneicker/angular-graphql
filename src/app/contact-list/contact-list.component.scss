@@ -1,38 +1,28 @@
 .contacts {
-    display: flex;
-
-    & > * + * {
-        margin-left: 42px;
+    
+    &__header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 42px;
+        padding-bottom: 8px;
     }
 
-    &__list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+    &__header > * {
+        flex: 1;
     }
 
-    &__list > * + * {
-        margin-top: 8px; 
-    }
-
-    &__list > * > button {
-        border-radius: 3px;
-        border: 0;
-        color: white;
-        display: block;
-        background: #0c78af;
-        cursor: pointer;
-        font-size: 15px;
+    &__title {
+        font-size: 24px;
         font-weight: 500;
-        padding: 8px 16px;
-        transition: background .3s linear;
-        text-transform: uppercase;
-        width: 100%;
+    }
 
-        &:hover,
-        &.is-selected {
-            background: darken(#0c78af, 10%);
-        }
+    &__dropdown {
+        text-align: right;
+    }
+
+    &__dropdown > select {
+        font-size: inherit;
     }
 
     &__detail {
