@@ -23,8 +23,8 @@
       [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
   </div>
   <div class="contacts__profile-content">
-    <h1>{{ selectedContact.name.first }} {{ selectedContact.name.last }}</h1>
-    <h2>{{ selectedContact.jobTitle }}</h2>
+    <h1>{{ selectedContact.name.first }} {{ selectedContact.name.mi }} {{ selectedContact.name.last }}</h1>
+    <h2>{{ selectedContact.job_title }}</h2>
     <div>
       {{ selectedContact.address.addr1 }}
       <ng-container *ngIf="selectedContact.address.addr2">

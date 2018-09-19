@@ -11,7 +11,7 @@ module.exports = `
         createContact(
             id: Int!,
             name: NameInput,
-            jobTitle: String!,
+            job_title: String!,
             email: String!,
             phone: String!,
             bio: String!,
@@ -22,7 +22,7 @@ module.exports = `
     type Contact {
         id: Int
         name: Name
-        jobTitle: String
+        job_title: String
         email: String
         phone: String
         address: Address
@@ -32,6 +32,7 @@ module.exports = `
     type Name {
       first: String
       last: String
+      mi: String
     }
     type Address {
         addr1: String
@@ -44,6 +45,7 @@ module.exports = `
     input NameInput {
       first: String
       last: String
+      mi: String
     }
     input AddressInput {
         addr1: String

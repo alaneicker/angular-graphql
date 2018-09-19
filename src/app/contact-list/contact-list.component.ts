@@ -54,8 +54,9 @@ export class ContactListComponent implements OnInit {
           name {
             first
             last
+            mi
           }
-          jobTitle
+          job_title
           email
           phone
           bio

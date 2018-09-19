@@ -3,7 +3,7 @@ export interface IContact {
     name: Name;
     email: string;
     phone: string;
-    jobTitle: string;
+    job_title: string;
     bio: string;
     imgUrl: string;
     address: Address;
@@ -12,6 +12,7 @@ export interface IContact {
 export interface Name {
   first: string;
   last: string;
+  mi: string;
 }
 
 export interface Address {

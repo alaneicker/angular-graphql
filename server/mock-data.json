@@ -1,12 +1,13 @@
 [
     {
         "id": 1,
-        "jobTitle": "UI Engineer",
+        "job_title": "UI Engineer",
         "email": "stewart_thomson@gmail.com",
         "phone": "(224) 555-1234",
         "name": {
           "first": "Stewart",
-          "last": "Thompson"
+          "last": "Thompson",
+          "mi": "W"
         },
         "address": {
             "addr1": "585 Estate Drive",
@@ -21,12 +22,13 @@
     },
     {
         "id": 2,
-        "jobTitle": "Pencil Pusher",
+        "job_title": "Pencil Pusher",
         "email": "bbarker@gmail.com",
         "phone": "(312) 555-5678",
         "name": {
           "first": "Bob",
-          "last": "Baker"
+          "last": "Baker",
+          "mi": "M"
         },
         "address": {
             "addr1": "3432 Folsom St",
@@ -41,12 +43,13 @@
     },
     {
         "id": 3,
-        "jobTitle": "Zombie Enthusiast",
+        "job_title": "Zombie Enthusiast",
         "email": "j_hetfield@homail.com",
         "phone": "(773) 555-2000",
         "name": {
           "first": "Jame",
-          "last": "McCormick"
+          "last": "McCormick",
+          "mi": "S"
         },
         "address": {
             "addr1": "312 Main St",
@@ -62,11 +65,12 @@
     {
         "id": 4,
         "email": "g_moyer@yahoo.com",
-        "jobTitle": "Starbucks Barista",
+        "job_title": "Starbucks Barista",
         "phone": "(312) 555-3245",
         "name": {
           "first": "Greg",
-          "last": "Johnson"
+          "last": "Johnson",
+          "mi": "A"
         },
         "address": {
             "addr1": "1973 W Devon",
@@ -82,11 +86,12 @@
     {
         "id": 5,
         "email": "m.dillon@yahoo.com",
-        "jobTitle": "Web Designer",
+        "job_title": "Web Designer",
         "phone": "(847) 555-2100",
         "name": {
           "first": "Mary",
-          "last": "Smith"
+          "last": "Smith",
+          "mi": "J"
         },
         "address": {
             "addr1": "525 W Talcott",
