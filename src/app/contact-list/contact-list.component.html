@@ -20,7 +20,7 @@
   <div class="contacts__profile-image">
     <img
       [src]="selectedContact.imgUrl"
-      [alt]="selectedContact.first_name + ' ' + selectedContact.last_name">
+      [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
   </div>
   <div class="contacts__profile-content">
     <h1>{{ selectedContact.name.first }} {{ selectedContact.name.last }}</h1>
