@@ -3,15 +3,14 @@ module.exports = `
         contact(id: Int!): Contact
         allContacts: [Contact]
         contactByName(
-            first_name: String!, 
+            first_name: String!,
             last_name: String!
         ): Contact
     },
     type Mutation {
         createContact(
             id: Int!,
-            first_name: String!,
-            last_name: String!,
+            name: NameInput,
             jobTitle: String!,
             email: String!,
             phone: String!,
@@ -22,8 +21,7 @@ module.exports = `
     }
     type Contact {
         id: Int
-        first_name: String
-        last_name: String
+        name: Name
         jobTitle: String
         email: String
         phone: String
@@ -31,26 +29,28 @@ module.exports = `
         bio: String
         imgUrl: String
     }
+    type Name {
+      first: String
+      last: String
+    }
     type Address {
         addr1: String
-        addr2: Addr2
+        addr2: String
+        addr2_type: String
         city: String
         state: String
         zip: String
     }
-    type Addr2 {
-        type: String
-        identifier: String
-    }
-    input Addr2Input {
-        type: String
-        identifier: String
+    input NameInput {
+      first: String
+      last: String
     }
     input AddressInput {
         addr1: String
-        addr2: Addr2Input
+        addr2: String
+        addr2_type: String
         city: String
         state: String
         zip: String
-    } 
+    }
 `;

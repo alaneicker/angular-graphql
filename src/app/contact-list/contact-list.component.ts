@@ -32,8 +32,10 @@ export class ContactListComponent implements OnInit {
       query allContacts {
         allContacts {
           id
-          first_name
-          last_name
+          name {
+            first
+            last
+          }
         }
       }
     `).then(res => {
@@ -49,8 +51,10 @@ export class ContactListComponent implements OnInit {
     this.queryService.query(`
       query {
         contact(id: ${this.selectedContactId}) {
-          first_name
-          last_name
+          name {
+            first
+            last
+          }
           jobTitle
           email
           phone
@@ -58,10 +62,8 @@ export class ContactListComponent implements OnInit {
           imgUrl
           address {
             addr1
-            addr2 {
-              type
-              identifier
-            }
+            addr2
+            addr2_type
             city
             state
             zip

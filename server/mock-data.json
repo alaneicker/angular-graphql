@@ -1,17 +1,17 @@
 [
     {
         "id": 1,
-        "first_name": "Stewart",
-        "last_name": "Thompson",
         "jobTitle": "UI Engineer",
         "email": "stewart_thomson@gmail.com",
         "phone": "(224) 555-1234",
+        "name": {
+          "first": "Stewart",
+          "last": "Thompson"
+        },
         "address": {
             "addr1": "585 Estate Drive",
-            "addr2": {
-                "type": "Apt",
-                "identifier": "2B"
-            },
+            "addr2": "2B",
+            "addr2_type": "Apt",
             "city": "Buffalo Grove",
             "state": "IL",
             "zip": "60089"
@@ -21,17 +21,17 @@
     },
     {
         "id": 2,
-        "first_name": "Bob",
-        "last_name": "Baker",
         "jobTitle": "Pencil Pusher",
         "email": "bbarker@gmail.com",
         "phone": "(312) 555-5678",
+        "name": {
+          "first": "Bob",
+          "last": "Baker"
+        },
         "address": {
             "addr1": "3432 Folsom St",
-            "addr2": {
-                "type": "Unit",
-                "identifier": "205"
-            },
+            "addr2": "205",
+            "addr2_type": "Unit",
             "city": "San Francisco",
             "state": "CA",
             "zip": "60089"
@@ -41,17 +41,17 @@
     },
     {
         "id": 3,
-        "first_name": "Jame",
-        "last_name": "McCormick",
         "jobTitle": "Zombie Enthusiast",
         "email": "j_hetfield@homail.com",
         "phone": "(773) 555-2000",
+        "name": {
+          "first": "Jame",
+          "last": "McCormick"
+        },
         "address": {
             "addr1": "312 Main St",
-            "addr2": {
-                "type": null,
-                "identifier": null
-            },
+            "addr2": null,
+            "addr2_type": null,
             "city": "Evanston",
             "state": "IL",
             "zip": "60602"
@@ -61,17 +61,17 @@
     },
     {
         "id": 4,
-        "first_name": "Greg",
-        "last_name": "Johnson",
         "email": "g_moyer@yahoo.com",
         "jobTitle": "Starbucks Barista",
         "phone": "(312) 555-3245",
+        "name": {
+          "first": "Greg",
+          "last": "Johnson"
+        },
         "address": {
             "addr1": "1973 W Devon",
-            "addr2": {
-                "type": null,
-                "identifier": null
-            },
+            "addr2": null,
+            "addr2_type": null,
             "city": "Chicago",
             "state": "IL",
             "zip": "60631"
@@ -81,17 +81,17 @@
     },
     {
         "id": 5,
-        "first_name": "Mary",
-        "last_name": "Smith",
         "email": "m.dillon@yahoo.com",
         "jobTitle": "Web Designer",
         "phone": "(847) 555-2100",
+        "name": {
+          "first": "Mary",
+          "last": "Smith"
+        },
         "address": {
             "addr1": "525 W Talcott",
-            "addr2": {
-                "type": "Apt",
-                "identifier": "5"
-            },
+            "addr2": "5",
+            "addr2_type": "Apt",
             "city": "Park Ridge",
             "state": "IL",
             "zip": "60068"
