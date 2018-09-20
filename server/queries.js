@@ -33,8 +33,9 @@ const queries = () => {
 
     'use strict';
 
-    // Simulating response data
-    const responseData = require('./mock-data.json');
+    const getFirstIds = () => {
+        return contacts.find({});
+    }
 
     // Gets all contacts
     const allContacts = () => {
@@ -60,6 +61,7 @@ const queries = () => {
     }
 
     return {
+        getFirstIds: getFirstIds,
         allContacts: allContacts,
         contact: contact,
         contactByName: getContactByName,
