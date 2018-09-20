@@ -60,7 +60,7 @@ export class ContactListComponent implements OnInit {
           email
           phone
           bio
-          imgUrl
+          img_url
           address {
             addr1
             addr2

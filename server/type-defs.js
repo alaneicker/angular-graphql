@@ -15,7 +15,7 @@ module.exports = `
             email: String!,
             phone: String!,
             bio: String!,
-            imgUrl: String!,
+            img_url: String!,
             address: AddressInput
         ): Contact
     }
@@ -27,7 +27,7 @@ module.exports = `
         phone: String
         address: Address
         bio: String
-        imgUrl: String
+        img_url: String
     }
     type Name {
       first: String

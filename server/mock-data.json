@@ -18,7 +18,7 @@
             "zip": "60089"
         },
         "bio": "Award-winning creator. Friendly internet fanatic. Hardcore communicator. Alcohol expert. Food guru.",
-        "imgUrl": "https://scontent-ort2-1.cdninstagram.com/vp/9672c9dea32d48b5080ba5a5189f836c/5C2B6AA0/t51.2885-15/e35/10388046_1610330982542097_1420566945_n.jpg"
+        "img_url": "https://scontent-ort2-1.cdninstagram.com/vp/9672c9dea32d48b5080ba5a5189f836c/5C2B6AA0/t51.2885-15/e35/10388046_1610330982542097_1420566945_n.jpg"
     },
     {
         "id": 2,
@@ -39,7 +39,7 @@
             "zip": "60089"
         },
         "bio": "Amateur social media fanatic. Typical travel advocate. Internet fan. Proud web lover. Passionate food nerd. Friendly gamer. Wannabe zombie practitioner.",
-        "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=19141&type=square&ts=1509532892453"
+        "img_url": "https://cap.stanford.edu/profiles/viewImage?profileId=19141&type=square&ts=1509532892453"
     },
     {
         "id": 3,
@@ -60,7 +60,7 @@
             "zip": "60602"
         },
         "bio": "Professional zombie enthusiast. Hipster-friendly writer. Infuriatingly humble communicator. Freelance beer nerd. Evil web fanatic. Creator.",
-        "imgUrl": "https://cap.stanford.edu/profiles/viewImage?profileId=23625&type=square&ts=1509499551746"
+        "img_url": "https://cap.stanford.edu/profiles/viewImage?profileId=23625&type=square&ts=1509499551746"
     },
     {
         "id": 4,
@@ -81,7 +81,7 @@
             "zip": "60631"
         },
         "bio": "Wannabe entrepreneur. Zombie geek. Freelance alcohol fanatic. Twitter fanatic. Typical bacon fan.",
-        "imgUrl": "https://i.cricketcb.com/stats/img/faceImages/8364.jpg"
+        "img_url": "https://i.cricketcb.com/stats/img/faceImages/8364.jpg"
     },
     {
         "id": 5,
@@ -102,6 +102,6 @@
             "zip": "60068"
         },
         "bio": "Infuriatingly humble creator. Travel maven. Food trailblazer. Unapologetic thinker. Extreme music ninja. Tv specialist.",
-        "imgUrl": "https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-gabriela-mills-college.jpg"
+        "img_url": "https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-gabriela-mills-college.jpg"
     }
   ]

@@ -5,7 +5,7 @@ export interface IContact {
     phone: string;
     job_title: string;
     bio: string;
-    imgUrl: string;
+    img_url: string;
     address: Address;
 }
 
