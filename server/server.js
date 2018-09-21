@@ -3,8 +3,8 @@ const env = process.env.NODE_ENV || 'development';
 const app = require('express')();
 const express_graphql = require('express-graphql');
 const { buildSchema } = require('graphql');
-const schema = buildSchema(require('./type-defs'));
-const { queries } = require('./queries');
+const schema = buildSchema(require('./graphql/type-defs'));
+const { queries } = require('./graphql/queries');
 const cors = require('cors')
 const q = queries();
 
