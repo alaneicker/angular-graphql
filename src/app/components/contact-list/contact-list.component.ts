@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IContact } from '../../interfaces/contact.interface';
 import { QueryService } from '../../services/query.service';
 import { contactFragment } from '../../gql-query-fragments/contacts';
@@ -16,7 +16,9 @@ export class ContactListComponent implements OnInit {
   confirmationString: string;
   showToast = false;
   loading = true;
-  showAddContactModal = true;
+  showAddContactModal = false;
+
+  @Input() title: string;
 
   constructor(
     private queryService: QueryService
