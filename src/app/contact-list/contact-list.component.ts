@@ -12,7 +12,7 @@ export class ContactListComponent implements OnInit {
   contactNames: IContact[];
   selectedContact: IContact;
   selectedContactId: number;
-  loading: boolean;
+  loading = true;
 
   constructor(private queryService: QueryService) { }
 
@@ -21,16 +21,13 @@ export class ContactListComponent implements OnInit {
     this.getAllContactNames();
   }
 
-  // Unlike RESTful APIs, which return the entire resource whether
-  // needed or not, GraphQL allows the client to determine what
-  // data is needed to be sent back with the request.
-
-  getFirstIds() {
+  async getFirstIds() {
     this.queryService.query(`
       query allContacts {
         allContacts { id }
       }
     `).then(res => {
+      console.log(res);
       this.getContact(res.data.allContacts[0].id);
     });
   }
@@ -53,8 +50,7 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  getContact(e?) {
-    this.loading = true;
+  async getContact(e?) {
     this.selectedContactId = typeof e.target !== 'undefined' ? e.target.value : e;
 
     // This query is equivalent to `/contact/1`
