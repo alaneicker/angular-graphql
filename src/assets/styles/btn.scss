@@ -1,0 +1,14 @@
+.btn {
+    background: #0c78af;
+    border: 0;
+    color: #fff;
+    font-size: inherit;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    border-radius: 3px;
+    transition: background .2s linear;
+
+    &:hover {
+        background: darken(#0c78af, 7%);
+    }
+}

@@ -16,7 +16,7 @@ export class ContactListComponent implements OnInit {
   confirmationString: string;
   showToast = false;
   loading = true;
-  showAddContactModal = false;
+  showAddContactModal = true;
 
   constructor(
     private queryService: QueryService

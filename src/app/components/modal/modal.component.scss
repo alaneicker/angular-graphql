@@ -1,18 +1,53 @@
 .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
 
     &__window {
-
+        background: #fff;
+        flex: 0 75%;
+        flex-direction: column;
+        display: flex;
+        max-height: 90%;
     }
 
     &__head {
+        padding: 32px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__close-btn {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1;
+        transform: rotate(45deg);
+        background: transparent;
+        border: 0;
+        color: #555;
+        outline: 0;
     }
 
     &__body {
-
+        padding: 32px;
+        overflow: auto;
     }
 
     &__footer {
-        
+        border-top: 1px solid #ccc;
+        padding: 32px;
     }
 }
