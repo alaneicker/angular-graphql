@@ -16,10 +16,12 @@
   </div>
 </div>
 
-<app-toast 
-  [show]="true" 
-  [innerHTML]="confirmationString">
-</app-toast>
+<app-toaster>
+    <app-toast 
+      [show]="true" 
+      [innerHTML]="confirmationString">
+    </app-toast>
+</app-toaster>
 
 <ng-template #contact>
   <div class="contacts__profile-image">

@@ -6,15 +6,17 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { AppComponent } from './app.component';
-import { ContactListComponent } from './contact-list/contact-list.component';
-import { ToastComponent } from './toast/toast.component';
+import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { ToastComponent } from './components/toast/toast.component';
+import { ToasterComponent } from './components/toaster/toaster.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
-    ToastComponent
+    ToastComponent,
+    ToasterComponent
   ],
   imports: [
     BrowserModule,
