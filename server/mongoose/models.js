@@ -10,8 +10,8 @@ const schema = new Schema({
     },
     address: {
         addr1: { type: String, required: true, default: '' },
-        addr2: { type: String, required: true, default: '' },
-        addr2_type: { type: String, required: true, default: '' },
+        addr2: { type: String, required: false, default: '' },
+        addr2_type: { type: String, required: false, default: '' },
         city: { type: String, required: true, default: '' },
         state: { type: String, required: true, default: '' },
         zip: { type: String, required: true, default: '' }
@@ -19,10 +19,10 @@ const schema = new Schema({
     job_title: { type: String, required: true, default: '' },
     phone: { type: String, required: true, default: '' },
     email: { type: String, required: true, default: '' },
-    bio: { type: String, required: true, default: '' },
-    img_url: { type: String, required: true, default: '' }
+    bio: { type: String, required: false, default: '' },
+    img_url: { type: String, required: false, default: '' }
 });
 
 module.exports = {
-    contacts: mongoose.model('contact_list', schema)
+    Contacts: mongoose.model('contact_list', schema)
 };

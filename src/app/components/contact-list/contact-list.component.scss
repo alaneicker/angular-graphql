@@ -47,25 +47,6 @@
             display: block;
             width: 100%;
         }
-
-        & :last-child > button {
-            background: #f0f0f0;
-            display: block;
-            height: 100%;
-            width: 100%;
-            position: relative;
-
-            span {
-                font-size: 50px;
-                font-weight: 600;
-                color: #555;
-                line-height: 1;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
     }
 
     &__detail {

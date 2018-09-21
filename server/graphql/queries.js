@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const contacts = require('../mongoose/models').contacts;
+const Contacts = require('../mongoose/models').Contacts;
 
 mongoose.connect('mongodb://localhost/contacts');
 
@@ -8,29 +8,32 @@ const queries = () => {
     'use strict';
 
     const getFirstIds = () => {
-        return contacts.find({});
+        return Contacts.find({});
     }
 
     // Gets all contacts
     const allContacts = () => {
-        return contacts.find({});
+        return Contacts.find({});
     }
 
     // Gets a single contact
     const contact = args => {
-        return contacts.findOne({ id: args.id });
+        return Contacts.findOne({ id: args.id });
     }
     
     // Gets a single contact by `first_name` and `last_name`
     const getContactByName = args => {
-        return responseData.filter(contact => {
-            return contact.first_name === args.first_name
-                && contact.last_name === args.last_name; 
-        })[0];
+        
     }
 
     // Creates a contact
     const createContact = (contact) => {
+        Contacts.create(contact, (err, small) => {
+            if (err) {
+                console.log(err);
+            }
+            console.log('Contact created!');
+        });
         return contact;
     }
 

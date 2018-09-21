@@ -5,20 +5,18 @@
     </div>
   </div>
   <div class="contacts__body">
-    <ul class="contacts__menu">
-      <li *ngFor="let contact of allContacts; let i = index">
-        <button (click)="getContact(contact.id)">
+    <div>
+      <ul class="contacts__menu vr">
+        <li *ngFor="let contact of allContacts; let i = index">
+          <button (click)="getContact(contact.id)">
             <img 
               [src]="contact.img_url" 
               [alt]="contact.name.first + ' ' + contact.name.last">
-        </button>
-      </li>
-      <li>
-        <button title="Add New Contact" (click)="openAddContactModal()">
-          <span>+</span>
-        </button>
-      </li>
-    </ul>
+          </button>
+        </li>
+      </ul>
+      <a href="javascript:void(0)" (click)="openAddContactModal()">Add New Contact</a>
+    </div>
     <div class="contacts__detail">
       <ng-container *ngIf="loading; else contact">Loading...</ng-container>
     </div>
@@ -36,7 +34,7 @@
         <app-add-contact-form></app-add-contact-form>
     </ng-container>
     <ng-container modal-footer>
-      <button class="btn" (click)="submitAddContactForm()">Submit</button>
+      <button class="btn" (click)="createContact()">Submit</button>
     </ng-container>
 </app-modal>
 
@@ -52,6 +50,7 @@
     </app-toast>
 </app-toaster>
 
+<!-- Contact Detail Content Template -->
 <ng-template #contact>
   <div class="contacts__profile-image">
     <img

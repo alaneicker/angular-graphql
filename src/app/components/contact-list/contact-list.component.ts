@@ -27,7 +27,6 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     this.getFirstIds();
     this.getAllContactImgUrls();
-    this.createContact();
   }
 
   closeAddContactModal() {
@@ -90,24 +89,26 @@ export class ContactListComponent implements OnInit {
         createContact(
           id: 10,
           name: {
-            first: "Alan",
-            last: "Eicker",
-            mi: "W"
+            first: "Fred",
+            last: "Flintstone",
+            mi: "J"
           },
-          job_title: "UI Engineer",
-          email: "aeick@allstate.com",
-          phone: "224-567-8900",
-          bio: "Bio content...",
-          img_url: "http://path/to/img.jpg",
+          job_title: "Rock Quarry Forman",
+          email: "fflintstone@allstate.com",
+          phone: "760-345-9945",
+          bio: "Internet scholar. Travelaholic. Analyst. Certified music fan. Professional pop culture expert. Unapologetic explorer. Bacon lover.",
+          img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTKV_6DBw6w9r3BDGrT3luUm88FK0uYgRXcIqtp4zLxbhemt8k",
           address: {
-            addr1: "345 Main street",
+            addr1: "773 Sandstone Drive",
             addr2: null,
             addr2_type: null,
-            city: "Evanston",
-            state: "IL",
-            zip: "60089"
+            city: "Bedrock",
+            state: "Pangea",
+            zip: "99999"
           }
         ) {
+          id
+          img_url
           name {
             first
             last
@@ -115,8 +116,9 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
+      this.allContacts.push(res.data.createContact);
+      this.showAddContactModal = false;
       this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
-      // this.showToast = true;
     });
   }
 
