@@ -13,6 +13,8 @@ export class ContactListComponent implements OnInit {
   contactNames: IContact[];
   selectedContact: IContact;
   selectedContactId: number;
+  confirmationString: string;
+  showNewContactAlert = false;
   loading = true;
 
   constructor(
@@ -97,8 +99,8 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      const confirmationString = `New contact created for ${res.data.createContact.name.first} ${res.data.createContact.name.last}`;
-      // Show confirmation message
+      this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
+      this.showNewContactAlert = true;
     });
   }
 

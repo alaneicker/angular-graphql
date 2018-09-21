@@ -16,6 +16,19 @@
   </div>
 </div>
 
+<div class="overlay" *ngIf="showNewContactAlert">
+  <!-- Create AlertComponent <app-alert [bodyText]="myVariable"></app-alert> -->
+  <div class="alert">
+    <div class="alert__body" [innerHTML]="confirmationString"></div>
+    <div class="alert__footer">
+      <button 
+        class="btn" 
+        type="button" 
+        (click)="showNewContactAlert = false">OK</button>
+    </div>
+  </div>
+</div>
+
 <ng-template #contact>
   <div class="contacts__profile-image">
     <img
