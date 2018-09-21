@@ -117,6 +117,7 @@ export class ContactListComponent implements OnInit {
       }
     `).then(res => {
       this.allContacts.push(res.data.createContact);
+      this.getContact(res.data.createContact.id);
       this.showAddContactModal = false;
       this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
     });
