@@ -16,6 +16,7 @@ export class ContactListComponent implements OnInit {
   confirmationString: string;
   showToast = false;
   loading = true;
+  showAddContactModal = false;
 
   constructor(
     private queryService: QueryService
@@ -25,6 +26,18 @@ export class ContactListComponent implements OnInit {
     this.getFirstIds();
     this.getAllContactImgUrls();
     this.createContact();
+  }
+
+  closeAddContactModal() {
+    this.showAddContactModal = false;
+  }
+
+  openAddContactModal() {
+    this.showAddContactModal = true;
+  }
+
+  submitAddContactForm() {
+    this.showAddContactModal = false;
   }
 
   getFirstIds() {

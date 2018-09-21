@@ -14,7 +14,7 @@
         </button>
       </li>
       <li>
-        <button title="Add New Contact">
+        <button title="Add New Contact" (click)="openAddContactModal()">
           <span>+</span>
         </button>
       </li>
@@ -24,6 +24,21 @@
     </div>
   </div>
 </div>
+
+<app-modal 
+  *ngIf="showAddContactModal"
+  [title]="'Add New Contact'"
+  (close)="closeAddContactModal($event)">
+    <ng-container modal-header>
+      Add New Contact
+    </ng-container>
+    <ng-container modal-body>
+        <app-add-contact-form></app-add-contact-form>
+    </ng-container>
+    <ng-container modal-footer>
+      <button (click)="submitAddContactForm()">Submit</button>
+    </ng-container>
+</app-modal>
 
 <!-- 
   TODO: Make toaster service so that this can be made global.
