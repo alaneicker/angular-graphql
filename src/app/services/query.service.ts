@@ -17,6 +17,15 @@ export class QueryService {
         .catch(this.handleError);
     }
 
+    mutation(q): Promise<any> {
+        return this.apollo.mutate({
+            mutation: gql`${q}`
+        })
+        .toPromise()
+        .then(this.handleSuccess)
+        .catch(this.handleError);
+    }
+
     private handleSuccess(res: any) {
         return res || {};
     }

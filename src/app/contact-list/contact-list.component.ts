@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IContact } from '../interfaces/contact.interface';
 import { QueryService } from '../services/query.service';
+import { contactFragment } from '../gql-query-fragments/contacts';
 
 @Component({
   providers: [QueryService],
@@ -14,20 +15,51 @@ export class ContactListComponent implements OnInit {
   selectedContactId: number;
   loading = true;
 
-  constructor(private queryService: QueryService) { }
+  constructor(
+    private queryService: QueryService
+  ) { }
 
   ngOnInit() {
     this.getFirstIds();
     this.getAllContactNames();
+
+    this.queryService.mutation(`
+      mutation {
+        createContact(
+          id: 10,
+          name: {
+            first: "Alan",
+            last: "Eicker",
+            mi: "W"
+          },
+          job_title: "UI Engineer",
+          email: "aeick@allstate.com",
+          phone: "224-567-8900",
+          bio: "Bio content...",
+          img_url: "http://path/to/img.jpg",
+          address: {
+            addr1: "345 Main street",
+            addr2: null,
+            addr2_type: null,
+            city: "Evanston",
+            state: "IL",
+            zip: "60089"
+          }
+        ) {
+          ${contactFragment}
+        }
+      }
+    `).then(res => {
+      console.log(res);
+    });
   }
 
-  async getFirstIds() {
+  getFirstIds() {
     this.queryService.query(`
       query allContacts {
         allContacts { id }
       }
     `).then(res => {
-      console.log(res);
       this.getContact(res.data.allContacts[0].id);
     });
   }
@@ -57,24 +89,7 @@ export class ContactListComponent implements OnInit {
     this.queryService.query(`
       query {
         contact(id: ${this.selectedContactId}) {
-          name {
-            first
-            last
-            mi
-          }
-          job_title
-          email
-          phone
-          bio
-          img_url
-          address {
-            addr1
-            addr2
-            addr2_type
-            city
-            state
-            zip
-          }
+          ${contactFragment}
         }
       }
     `).then(res => {
