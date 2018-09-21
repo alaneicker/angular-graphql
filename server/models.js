@@ -1,7 +1,7 @@
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
-module.exports = new Schema({
+const schema = new Schema({
     id: { type: Number, required: true, default: '' },
     name: {
         first: { type: String, required: true, default: '' },
@@ -22,3 +22,7 @@ module.exports = new Schema({
     bio: { type: String, required: true, default: '' },
     img_url: { type: String, required: true, default: '' }
 });
+
+module.exports = {
+    contacts: mongoose.model('contact_list', schema)
+};

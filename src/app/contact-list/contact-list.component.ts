@@ -56,7 +56,7 @@ export class ContactListComponent implements OnInit {
   getContact(e?) {
     this.loading = true;
     this.selectedContactId = typeof e.target !== 'undefined' ? e.target.value : e;
-  
+
     // This query is equivalent to `/contact/1`
     this.queryService.query(`
       query {

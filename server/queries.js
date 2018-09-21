@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const contactSchema = require('contact-list-schema');
-const contacts = mongoose.model('contact_list', contactSchema);
+const contacts = require('./models').contacts;
 
 mongoose.connect('mongodb://localhost/contacts');
 
