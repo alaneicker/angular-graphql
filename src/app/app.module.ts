@@ -7,12 +7,14 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
+import { ToastComponent } from './toast/toast.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent
+    ContactListComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
