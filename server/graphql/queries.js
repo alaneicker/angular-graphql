@@ -28,13 +28,7 @@ const queries = () => {
 
     // Creates a contact
     const createContact = (contact) => {
-        Contacts.create(contact, err => {
-            if (err) {
-                console.log(err);
-            }
-            console.log('New contact created!');
-        });
-        return contact;
+        return Contacts.create(contact);
     }
 
     return {

@@ -80,4 +80,9 @@
     <textarea id="bio"></textarea>
   </div>
 
+  <ng-container *ngIf="onSubmitEvent">
+    <div class="vr-2"></div>
+    <button class="btn" (click)="onSubmit()">Submit</button>
+  </ng-container>
+
 </form>
