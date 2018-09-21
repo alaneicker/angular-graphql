@@ -1,7 +1,5 @@
 .modal {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,14 +9,12 @@
 
     &__window {
         background: #fff;
-        flex: 0 75%;
         flex-direction: column;
         display: flex;
-        max-height: 90%;
     }
 
     &__head {
-        padding: 32px;
+        padding: 24px 32px;
         border-bottom: 1px solid #ccc;
         display: flex;
         align-items: center;
@@ -48,6 +44,16 @@
 
     &__footer {
         border-top: 1px solid #ccc;
-        padding: 32px;
+        padding: 24px 32px;
+    }
+
+    @media(min-width: 768px) {
+        justify-content: center;
+        align-items: center;
+
+        &__window {
+            flex: 0 75%;
+            max-height: 90%;
+        }
     }
 }
