@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { ToasterComponent } from './components/toaster/toaster.component';
+import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ToasterComponent } from './components/toaster/toaster.component';
     AppComponent,
     ContactListComponent,
     ToastComponent,
-    ToasterComponent
+    ToasterComponent,
+    AddContactFormComponent
   ],
   imports: [
     BrowserModule,

@@ -17,18 +17,60 @@
         font-weight: 500;
     }
 
-    &__dropdown {
-        text-align: right;
+    &__body {
+        display: flex;
+
+        & > * + * {
+            margin-left: 32px;
+        }
     }
 
-    &__dropdown > select {
-        font-size: inherit;
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        max-width: 300px;
+
+        & > * {
+            flex: 0 33%;
+            padding: 1px;
+        }
+
+        & > * button {
+            border: 0;
+            background: transparent;
+            padding: 0;
+            display: block;
+        }
+
+        & > * img {
+            display: block;
+            width: 100%;
+        }
+
+        & :last-child > button {
+            background: #f0f0f0;
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            span {
+                font-size: 50px;
+                font-weight: 600;
+                color: #555;
+                line-height: 1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 
     &__detail {
         background: #f5f5f5;
-        padding: 24px;
-        border: 1px solid #ccc;
+        padding: 32px;
         text-align: center;
 
         h1, h2 {
@@ -37,6 +79,8 @@
 
         h1 {
             font-size: 32px;
+            font-weight: 600;
+            margin: 0;
         }
 
         h2 {

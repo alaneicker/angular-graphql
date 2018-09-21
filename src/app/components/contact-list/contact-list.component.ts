@@ -10,7 +10,7 @@ import { contactFragment } from '../../gql-query-fragments/contacts';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
-  contactNames: IContact[];
+  allContacts: IContact[];
   selectedContact: IContact;
   selectedContactId: number;
   confirmationString: string;
@@ -23,7 +23,7 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit() {
     this.getFirstIds();
-    this.getAllContactNames();
+    this.getAllContactImgUrls();
     this.createContact();
   }
 
@@ -37,11 +37,12 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  getAllContactNames() {
+  getAllContactImgUrls() {
     this.queryService.query(`
       query allContacts {
         allContacts {
           id
+          img_url
           name {
             first
             last
@@ -49,7 +50,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.contactNames = res.data.allContacts;
+      this.allContacts = res.data.allContacts;
     });
   }
 

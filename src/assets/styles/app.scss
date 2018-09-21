@@ -36,6 +36,16 @@ a {
     color: #0c78af;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
 small {
     font-size: 11px;
 }
