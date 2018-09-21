@@ -1,15 +1,29 @@
 .input {
     margin-bottom: 8px;
+
+    &--sm {
+        flex: 0 75px;
+    }
+
+    &--md {
+        flex: 0 150px;
+    }
 }
 
 input[type="text"],
 input[type="number"],
 input[type="email"],
 textarea {
+    border: 1px solid #ccc;
     font-family: inherit;
     font-size: inherit;
     padding: 8px;
     width: 100%;
+}
+
+textarea {
+    min-height: 150px;
+    resize: none;
 }
 
 label {

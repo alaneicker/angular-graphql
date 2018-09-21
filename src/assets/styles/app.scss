@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,900,900i');
 
 @import 'flexbox',
-    'forms';
+    'forms',
+    'vr';
 
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -33,6 +34,10 @@ h2 {
 
 a {
     color: #0c78af;
+}
+
+small {
+    font-size: 11px;
 }
 
 .wrapper {
