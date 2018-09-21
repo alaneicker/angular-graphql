@@ -5,7 +5,10 @@
     </div>
     <div class="contacts__dropdown">
         <select (change)="getContact($event)">
-          <option *ngFor="let contact of contactNames" [value]="contact.id">
+          <option 
+            *ngFor="let contact of contactNames; let i = index" 
+            [value]="contact.id"
+            [selected]="selectedContactId === (i + 1)">
             {{ contact.name.first }} {{ contact.name.last }}
           </option>
         </select>
@@ -16,9 +19,14 @@
   </div>
 </div>
 
+<!-- 
+  TODO: Make toaster service so that this can be made global.
+  Toaster service will have an observable to check for new
+  toasts and update toast array.
+-->
 <app-toaster>
     <app-toast 
-      [show]="true">
+      [show]="showToast">
       <span [innerHTML]="confirmationString"></span>
     </app-toast>
 </app-toaster>

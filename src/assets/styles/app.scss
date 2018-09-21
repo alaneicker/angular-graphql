@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,900,900i');
 
+@import 'flexbox',
+    'forms';
+
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -10,12 +13,22 @@ body {
     margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+    margin: 0 0 16px;
+    font-weight: 500;
 }
 
 h1 {
     font-weight: 700;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 a {
@@ -23,7 +36,7 @@ a {
 }
 
 .wrapper {
-    max-width: 1024px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 16px;
 }

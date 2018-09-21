@@ -14,7 +14,7 @@ export class ContactListComponent implements OnInit {
   selectedContact: IContact;
   selectedContactId: number;
   confirmationString: string;
-  showNewContactAlert = false;
+  showToast = false;
   loading = true;
 
   constructor(
@@ -100,7 +100,7 @@ export class ContactListComponent implements OnInit {
       }
     `).then(res => {
       this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
-      this.showNewContactAlert = true;
+      // this.showToast = true;
     });
   }
 

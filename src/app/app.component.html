@@ -1,3 +1,24 @@
 <div class="wrapper">
-  <app-contact-list></app-contact-list>
+  <div class="u-flex u-flex--hr-2 u-flex--equalCols">
+    <div class="u-flex__item">
+      <form>
+        <h2>Add Contact</h2>
+        <div class="input">
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text">
+        </div>
+        <div class="input">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text">
+        </div>
+        <div class="input">
+          <label for="mi">Middle Initial</label>
+          <input id="mi" type="text">
+        </div>
+      </form>
+    </div>
+    <div class="u-flex__item">
+      <app-contact-list></app-contact-list>
+    </div>
+  </div>
 </div>

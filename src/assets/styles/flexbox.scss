@@ -1,0 +1,48 @@
+.u-flex {
+    display: flex;
+    width: 100%;
+  
+    &--wrap {
+        flex-wrap: wrap;
+    }
+  
+    &--hr > * + * {
+        margin-left: 16px;
+    }
+  
+    &--hr-2 > * + * {
+        margin-left: 32px;
+    }
+
+    &--hr-3 > * + * {
+        margin-left: rem(48);
+    }
+  
+    &--hr--reverse > * {
+        margin-right: 16px;
+    }
+  
+    &--small,
+    &--medium,
+    &--large {
+        &[class*="--hr"] > * + * {
+            margin-left: 0;
+        }
+    }
+  
+    &--middle {
+        align-items: center;
+    }
+  
+    &--space-between {
+        justify-content: space-between;
+    }
+  
+    &--equalCols > * {
+        flex: 1;
+    }
+  
+    &__item--grow {
+        flex: 1;
+    }
+}
