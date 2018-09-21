@@ -22,7 +22,51 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     this.getFirstIds();
     this.getAllContactNames();
+    this.createContact();
+  }
 
+  getFirstIds() {
+    this.queryService.query(`
+      query allContacts {
+        allContacts { id }
+      }
+    `).then(res => {
+      this.getContact(res.data.allContacts[0].id);
+    });
+  }
+
+  getAllContactNames() {
+    this.queryService.query(`
+      query allContacts {
+        allContacts {
+          id
+          name {
+            first
+            last
+          }
+        }
+      }
+    `).then(res => {
+      this.contactNames = res.data.allContacts;
+    });
+  }
+
+  async getContact(e?) {
+    this.selectedContactId = typeof e.target !== 'undefined' ? e.target.value : e;
+
+    this.queryService.query(`
+      query {
+        contact(id: ${this.selectedContactId}) {
+          ${contactFragment}
+        }
+      }
+    `).then(res => {
+        this.selectedContact = res.data.contact;
+        this.loading = false;
+      });
+  }
+
+  createContact() {
     this.queryService.mutation(`
       mutation {
         createContact(
@@ -46,31 +90,6 @@ export class ContactListComponent implements OnInit {
             zip: "60089"
           }
         ) {
-          ${contactFragment}
-        }
-      }
-    `).then(res => {
-      console.log(res);
-    });
-  }
-
-  getFirstIds() {
-    this.queryService.query(`
-      query allContacts {
-        allContacts { id }
-      }
-    `).then(res => {
-      this.getContact(res.data.allContacts[0].id);
-    });
-  }
-
-  getAllContactNames() {
-
-    // This query is equivalent to `/contacts`
-    this.queryService.query(`
-      query allContacts {
-        allContacts {
-          id
           name {
             first
             last
@@ -78,29 +97,9 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.contactNames = res.data.allContacts;
+      const confirmationString = `New contact created for ${res.data.createContact.name.first} ${res.data.createContact.name.last}`;
+      // Show confirmation message
     });
-  }
-
-  async getContact(e?) {
-    this.selectedContactId = typeof e.target !== 'undefined' ? e.target.value : e;
-
-    // This query is equivalent to `/contact/1`
-    this.queryService.query(`
-      query {
-        contact(id: ${this.selectedContactId}) {
-          ${contactFragment}
-        }
-      }
-    `).then(res => {
-        this.selectedContact = res.data.contact;
-        this.loading = false;
-      });
-  }
-
-  // TODO: Create Contact
-  createContact() {
-
   }
 
   // TODO: Update Contact
