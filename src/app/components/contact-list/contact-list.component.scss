@@ -6,7 +6,7 @@
     &__body {
         display: flex;
         flex-direction: column;
-        flex: 1;
+        flex: 1 0 auto;
     }
 
     &__menu {
@@ -18,7 +18,7 @@
 
         & > * {
             flex: 0 33.333%;
-            max-width: 64px;
+            max-width: 20%;
         }
 
         & > * button {
@@ -66,6 +66,7 @@
 
         &__body {
             flex-direction: row;
+            flex: 1;
 
             & > * + * {
                 margin-left: 24px;
