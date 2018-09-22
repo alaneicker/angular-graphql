@@ -85,44 +85,43 @@ export class ContactListComponent implements OnInit {
   }
 
   createContact(formData) {
-
-    // this.queryService.mutation(`
-    //   mutation {
-    //     createContact(
-    //       id: 10,
-    //       name: {
-    //         first: "Fred",
-    //         last: "Flintstone",
-    //         mi: "J"
-    //       },
-    //       job_title: "Rock Quarry Forman",
-    //       email: "fflintstone@allstate.com",
-    //       phone: "760-345-9945",
-    //       bio: "Internet scholar. Travelaholic. Analyst. Certified music fan. Professional pop culture expert. Unapologetic explorer. Bacon lover.",
-    //       img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTKV_6DBw6w9r3BDGrT3luUm88FK0uYgRXcIqtp4zLxbhemt8k",
-    //       address: {
-    //         addr1: "773 Sandstone Drive",
-    //         addr2: null,
-    //         addr2_type: null,
-    //         city: "Bedrock",
-    //         state: "Pangea",
-    //         zip: "99999"
-    //       }
-    //     ) {
-    //       id
-    //       img_url
-    //       name {
-    //         first
-    //         last
-    //       }
-    //     }
-    //   }
-    // `).then(res => {
-    //   this.allContacts.push(res.data.createContact);
-    //   this.getContact(res.data.createContact.id);
-    //   this.showAddContactModal = false;
-    //   this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
-    // });
+    this.queryService.mutation(`
+      mutation {
+        createContact(
+          id: ${Math.round(Math.random() * 1000000)},
+          name: {
+            first: "${formData.firstName}",
+            last: "${formData.lastName}",
+            mi: "${formData.mi}"
+          },
+          job_title: "${formData.jobTitle}",
+          email: "${formData.email}",
+          phone: "${formData.phone}",
+          bio: "${formData.bio}",
+          img_url: "${formData.imgUrl}",
+          address: {
+            addr1: "${formData.address}",
+            addr2: "${formData.address2}",
+            addr2_type: "${formData.address2Type}",
+            city: "${formData.city}",
+            state: "${formData.state}",
+            zip: "${formData.zip}"
+          }
+        ) {
+          id
+          img_url
+          name {
+            first
+            last
+          }
+        }
+      }
+    `).then(res => {
+      this.allContacts.push(res.data.createContact);
+      this.getContact(res.data.createContact.id);
+      this.showAddContactModal = false;
+      this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
+    });
   }
 
   // TODO: Update Contact
