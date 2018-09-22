@@ -6,7 +6,7 @@ const schema = new Schema({
     name: {
         first: { type: String, required: true, default: '' },
         last: { type: String, required: true, default: '' },
-        mi: { type: String, required: true, default: '' }
+        mi: { type: String, required: false, default: '' }
     },
     address: {
         addr1: { type: String, required: true, default: '' },
@@ -19,7 +19,7 @@ const schema = new Schema({
     job_title: { type: String, required: true, default: '' },
     phone: { type: String, required: true, default: '' },
     email: { type: String, required: true, default: '' },
-    bio: { type: String, required: false, default: '' },
+    bio: { type: String, required: true, default: '' },
     img_url: { type: String, required: false, default: '' }
 });
 

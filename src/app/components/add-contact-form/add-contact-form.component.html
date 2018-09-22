@@ -1,16 +1,19 @@
 <form
-(ngSubmit)="onSubmit(_form)" 
-[formGroup]="form" 
-#_form="ngForm"
-novalidate>
+  (ngSubmit)="onSubmit(_form)" 
+  [formGroup]="form" 
+  #_form="ngForm"
+  novalidate>
+  
   <div class="u-flex u-flex--hr u-flex--equalCols">
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('firstName').errors && _form.submitted">
       <label for="first-name">First Name</label>
       <input id="first-name" type="text" formControlName="firstName">
+      <small>First name is required.</small>
     </div>
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('lastName').errors && _form.submitted">
       <label for="last-name">Last Name</label>
       <input id="last-name" type="text" formControlName="lastName">
+      <small>Last name is required.</small>
     </div>
     <div class="input input--sm">
       <label for="mi">MI</label>
@@ -21,57 +24,63 @@ novalidate>
   <div class="vr-2"></div>
 
   <div class="u-flex u-flex--hr u-flex--equalCols">
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('email').errors && _form.submitted">
       <label for="email">Email</label>
       <input id="email" type="text" formControlName="email">
+      <small>Valid email address name is required.</small>
     </div>
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('phone').errors && _form.submitted">
       <label for="phone">Phone</label>
       <input id="phone" type="text" formControlName="phone">
+      <small>Phone number is required.</small>
     </div>
   </div>
 
   <div class="vr-2"></div>
 
   <div class="u-flex u-flex--hr u-flex--equalCols">
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('address').errors && _form.submitted">
       <label for="street">Street Address</label>
       <input id="street" type="text" formControlName="address">
+      <small>Street Address is required.</small>
     </div>
     <div class="input input--md">
       <label for="addr-2">Address 2</label>
       <input id="addr-2" type="text" formControlName="address2">
     </div>
     <div class="input input--md">
-      <label for="addr-2">Address 2 Type</label>
+      <label for="addr-2">APt / Unit</label>
       <input id="addr-2-type" type="text" formControlName="address2Type">
-      <small>Apt, Unit or Suite</small>
     </div>
   </div>
   
   <div class="u-flex u-flex--hr u-flex--equalCols">
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('city').errors && _form.submitted">
       <label for="city">City</label>
       <input id="city" type="text" formControlName="city">
+      <small>City is required.</small>
     </div>
-    <div class="input input--sm">
+    <div class="input input--md" [class.input--has-error]="form.get('state').errors && _form.submitted">
       <label for="state">State</label>
       <input id="state" type="text" formControlName="state">
+      <small>State is required.</small>
     </div>
-    <div class="input input--md">
-      <label for="zip">Zip</label>
+    <div class="input input--md" [class.input--has-error]="form.get('zip').errors && _form.submitted">
+      <label for="zip">Zip Code</label>
       <input id="zip" type="text" formControlName="zip">
+      <small>Zip code is required.</small>
     </div>
   </div>
 
   <div class="vr-2"></div>
 
   <div class="u-flex u-flex--hr u-flex--equalCols">
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('jobTitle').errors && _form.submitted">
       <label for="job-title">Job Title</label>
       <input id="job-title" type="text" formControlName="jobTitle">
+      <small>Job title is required.</small>
     </div>
-    <div class="input">
+    <div class="input" [class.input--has-error]="form.get('imgUrl').errors && _form.submitted">
       <label for="profile-pic">Profile Pic URL</label>
       <input id="profile-pic" type="text" formControlName="imgUrl">
     </div>
@@ -79,9 +88,10 @@ novalidate>
 
   <div class="vr-2"></div>
 
-  <div class="input">
+  <div class="input" [class.input--has-error]="form.get('bio').errors && _form.submitted">
     <label for="bio">Bio</label>
     <textarea id="bio" formControlName="bio"></textarea>
+    <small>Bio is required.</small>
   </div>
 
   <ng-container *ngIf="onsubmit">

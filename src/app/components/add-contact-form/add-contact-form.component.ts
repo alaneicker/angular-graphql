@@ -30,7 +30,7 @@ export class AddContactFormComponent implements OnInit {
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
       mi: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', Validators.required),
       imgUrl: new FormControl('', Validators.required),
       bio: new FormControl('', Validators.required),

@@ -22,6 +22,10 @@ label {
 .input {
     margin-bottom: 8px;
 
+    small {
+        display: none;
+    }
+
     &--sm {
         flex: 0 75px;
     }
@@ -34,7 +38,13 @@ label {
         color: #ef300e;
     }
 
-    &--has-error > input {
+    &--has-error > input,
+    &--has-error > textarea {
         border-color: #ef300e;
+    }
+
+    &--has-error > small {
+        color: #ef300e;
+        display: block;
     }
 }
