@@ -12,6 +12,7 @@ import { ToastComponent } from './components/toast/toast.component';
 import { ToasterComponent } from './components/toaster/toaster.component';
 import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ModalComponent } from './components/modal/modal.component';
     ToasterComponent,
     AddContactFormComponent,
     ModalComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

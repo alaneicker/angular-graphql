@@ -1,9 +1,15 @@
 <div class="contacts">
-  <div class="contacts__header">
-    <div  class="contacts__title">
-      {{ title }}
-    </div>
-  </div>
+
+  <!-- Header -->
+  <app-header>
+    <ng-container header-left>
+      <span class="txt-24 txt-medium">{{ title }}</span>
+    </ng-container>
+    <ng-container header-right>
+        <a class="txt-16" href="javascript:void(0)" (click)="openAddContactModal()">Add New Contact</a>
+    </ng-container>
+  </app-header>
+
   <div class="contacts__body">
     <div>
       <ul class="contacts__menu vr">
@@ -15,7 +21,6 @@
           </button>
         </li>
       </ul>
-      <a href="javascript:void(0)" (click)="openAddContactModal()">Add New Contact</a>
     </div>
     <div class="contacts__detail">
       <ng-container *ngIf="loading; else contact">Loading...</ng-container>
