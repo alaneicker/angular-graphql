@@ -44,8 +44,31 @@ export class AddContactFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    this.onsubmit.emit();
+  onSubmit(form: NgForm) {
+
+    const createContactFragment = `
+      id: 10,
+      name: {
+        first: "${this.form.get('firstName').value}",
+        last: "${this.form.get('lastName').value}",
+        mi: "${this.form.get('mi').value}"
+      },
+      job_title: "${this.form.get('jobTitle').value}",
+      email: "${this.form.get('email').value}",
+      phone: "${this.form.get('phone').value}",
+      bio: "${this.form.get('bio').value}",
+      img_url: "${this.form.get('imgUrl').value}",
+      address: {
+        addr1: "${this.form.get('address').value}",
+        addr2: "${this.form.get('address2').value}",
+        addr2_type: "${this.form.get('address2Type').value}",
+        city: "${this.form.get('city').value}",
+        state: "${this.form.get('state').value}",
+        zip: "${this.form.get('zip').value}"
+      }
+    `;
+
+    // this.onsubmit.emit();
   }
 
 }

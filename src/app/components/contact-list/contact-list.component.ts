@@ -84,7 +84,7 @@ export class ContactListComponent implements OnInit {
       });
   }
 
-  createContact() {
+  createContact(event) {
     this.queryService.mutation(`
       mutation {
         createContact(
