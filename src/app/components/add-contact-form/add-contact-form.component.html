@@ -1,16 +1,20 @@
-<form>
+<form
+(ngSubmit)="onSubmit(_form)" 
+[formGroup]="form" 
+#_form="ngForm"
+novalidate>
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input">
       <label for="first-name">First Name</label>
-      <input id="first-name" type="text">
+      <input id="first-name" type="text" formControlName="firstName">
     </div>
     <div class="input">
       <label for="last-name">Last Name</label>
-      <input id="last-name" type="text">
+      <input id="last-name" type="text" formControlName="lastName">
     </div>
     <div class="input input--sm">
       <label for="mi">MI</label>
-      <input id="mi" type="text">
+      <input id="mi" type="text" formControlName="mi">
     </div>
   </div>
 
@@ -19,11 +23,11 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input">
       <label for="email">Email</label>
-      <input id="email" type="text">
+      <input id="email" type="text" formControlName="email">
     </div>
     <div class="input">
       <label for="phone">Phone</label>
-      <input id="phone" type="text">
+      <input id="phone" type="text" formControlName="phone">
     </div>
   </div>
 
@@ -32,15 +36,15 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input">
       <label for="street">Street Address</label>
-      <input id="street" type="text">
+      <input id="street" type="text" formControlName="address">
     </div>
     <div class="input input--md">
       <label for="addr-2">Address 2</label>
-      <input id="addr-2" type="text">
+      <input id="addr-2" type="text" formControlName="address2">
     </div>
     <div class="input input--md">
       <label for="addr-2">Address 2 Type</label>
-      <input id="addr-2-type" type="text">
+      <input id="addr-2-type" type="text" formControlName="address2Type">
       <small>Apt, Unit or Suite</small>
     </div>
   </div>
@@ -48,15 +52,15 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input">
       <label for="city">City</label>
-      <input id="city" type="text">
+      <input id="city" type="text" formControlName="city">
     </div>
     <div class="input input--sm">
       <label for="state">State</label>
-      <input id="state" type="text">
+      <input id="state" type="text" formControlName="state">
     </div>
     <div class="input input--md">
       <label for="zip">Zip</label>
-      <input id="zip" type="text">
+      <input id="zip" type="text" formControlName="zip">
     </div>
   </div>
 
@@ -65,11 +69,11 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input">
       <label for="job-title">Job Title</label>
-      <input id="job-title" type="text">
+      <input id="job-title" type="text" formControlName="jobTitle">
     </div>
     <div class="input">
       <label for="profile-pic">Profile Pic URL</label>
-      <input id="profile-pic" type="text">
+      <input id="profile-pic" type="text" formControlName="imgUrl">
     </div>
   </div>
 
@@ -77,12 +81,12 @@
 
   <div class="input">
     <label for="bio">Bio</label>
-    <textarea id="bio"></textarea>
+    <textarea id="bio" formControlName="bio"></textarea>
   </div>
 
-  <ng-container *ngIf="onSubmitEvent">
+  <ng-container *ngIf="onsubmit">
     <div class="vr-2"></div>
-    <button class="btn" (click)="onSubmit()">Submit</button>
+    <button class="btn" type="submit">Submit</button>
   </ng-container>
 
 </form>

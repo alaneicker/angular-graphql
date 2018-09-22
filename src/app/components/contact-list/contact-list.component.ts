@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { IContact } from '../../interfaces/contact.interface';
 import { QueryService } from '../../services/query.service';
 import { contactFragment } from '../../gql-query-fragments/contacts';

@@ -31,10 +31,9 @@
       Add New Contact
     </ng-container>
     <ng-container modal-body>
-        <app-add-contact-form></app-add-contact-form>
-    </ng-container>
-    <ng-container modal-footer>
-      <button class="btn" (click)="createContact()">Submit</button>
+        <div class="padding-32">
+          <app-add-contact-form (onsubmit)="createContact($event)"></app-add-contact-form>
+        </div>
     </ng-container>
 </app-modal>
 

@@ -14,11 +14,11 @@
     }
 
     &__head {
-        padding: 24px 32px;
         border-bottom: 1px solid #ccc;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 24px 32px;
     }
 
     &__title {
@@ -38,13 +38,11 @@
     }
 
     &__body {
-        padding: 32px;
         overflow: auto;
     }
 
     &__footer {
         border-top: 1px solid #ccc;
-        padding: 24px 32px;
     }
 
     @media(min-width: 768px) {

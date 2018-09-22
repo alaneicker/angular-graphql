@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
@@ -20,13 +21,15 @@ import { ModalComponent } from './components/modal/modal.component';
     ToastComponent,
     ToasterComponent,
     AddContactFormComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -34,11 +37,11 @@ import { ModalComponent } from './components/modal/modal.component';
 export class AppModule {
   constructor(
     apollo: Apollo,
-    httpLink: HttpLink
+    httpLink: HttpLink,
   ) {
     apollo.create({
       link: httpLink.create({ uri: 'http://localhost:4000/graphql'}),
-      cache: new InMemoryCache()
+      cache: new InMemoryCache(),
     });
   }
 }
