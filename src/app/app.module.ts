@@ -14,6 +14,7 @@ import { AddContactFormComponent } from './components/add-contact-form/add-conta
 import { ModalComponent } from './components/modal/modal.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContactListMenuComponent } from './components/contact-list-menu/contact-list-menu.component';
+import { ContactListDetailComponent } from './components/contact-list-detail/contact-list-detail.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ContactListMenuComponent } from './components/contact-list-menu/contact
     ModalComponent,
     HeaderComponent,
     ContactListMenuComponent,
+    ContactListDetailComponent,
   ],
   imports: [
     BrowserModule,
