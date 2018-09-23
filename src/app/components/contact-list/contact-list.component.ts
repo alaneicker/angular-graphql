@@ -76,6 +76,7 @@ export class ContactListComponent implements OnInit {
 
   async getContact(e?) {
     this.selectedContactId = typeof e.target !== 'undefined' ? e.target.value : e;
+    this.menuIsOpen = false;
 
     this.queryService.query(`
       query {
