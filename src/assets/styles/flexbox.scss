@@ -1,6 +1,11 @@
 .u-flex {
     display: flex;
     width: 100%;
+
+    &--column {
+        flex-direction: column;
+        height: 100%;
+    }
   
     &--wrap {
         flex-wrap: wrap;

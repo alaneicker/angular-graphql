@@ -1,4 +1,4 @@
-<div class="contacts">
+<div class="u-flex u-flex--column">
 
   <!-- Header -->
   <app-header>
@@ -10,19 +10,54 @@
     </ng-container>
   </app-header>
 
-  <div class="contacts__body">
-    <ul class="contacts__menu">
-      <li *ngFor="let contact of allContacts; let i = index">
-        <button (click)="getContact(contact.id)">
-          <img 
-            [src]="contact.img_url" 
-            [alt]="contact.name.first + ' ' + contact.name.last">
-        </button>
-      </li>
-    </ul>
-    <div class="contacts__detail">
+  <div class="contact-list">
+
+    <app-contact-list-menu 
+      [contacts]="allContacts"
+      (selection)="getContact($event)">
+    </app-contact-list-menu>
+
+    <div class="contact-list__detail">
       <ng-container *ngIf="loading; else contact">Loading...</ng-container>
+      <ng-template #contact>
+          <div class="contact-list__profile-image">
+            <img
+              [src]="selectedContact.img_url"
+              [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
+          </div>
+          <div class="contact-list__profile-content">
+            <h1>
+              {{ selectedContact.name.first }}
+              {{ selectedContact.name.mi }}
+              {{ selectedContact.name.last }}
+            </h1>
+            <h2>{{ selectedContact.job_title }}</h2>
+            
+            <div>
+              {{ selectedContact.address.addr1 }}
+              <ng-container *ngIf="selectedContact.address.addr2">
+                {{ selectedContact.address.addr2_type }}
+                {{ selectedContact.address.addr2 }},
+              </ng-container>
+              {{ selectedContact.address.city }},
+              {{ selectedContact.address.state }}
+              {{ selectedContact.address.zip }}
+            </div>
+            
+            <div>
+              {{ selectedContact.phone }}
+            </div>
+
+            <div>
+              <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
+            </div>
+
+            <p>{{ selectedContact.bio }}</p>
+
+          </div>
+        </ng-template>
     </div>
+
   </div>
 </div>
 
@@ -51,35 +86,3 @@
       <span [innerHTML]="confirmationString"></span>
     </app-toast>
 </app-toaster>
-
-<!-- Contact Detail Content Template -->
-<ng-template #contact>
-  <div class="contacts__profile-image">
-    <img
-      [src]="selectedContact.img_url"
-      [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
-  </div>
-  <div class="contacts__profile-content">
-    <h1>
-      {{ selectedContact.name.first }}
-      {{ selectedContact.name.mi }}
-      {{ selectedContact.name.last }}
-    </h1>
-    <h2>{{ selectedContact.job_title }}</h2>
-    <div>
-      {{ selectedContact.address.addr1 }}
-      <ng-container *ngIf="selectedContact.address.addr2">
-        {{ selectedContact.address.addr2_type }}
-        {{ selectedContact.address.addr2 }},
-      </ng-container>
-      {{ selectedContact.address.city }},
-      {{ selectedContact.address.state }}
-      {{ selectedContact.address.zip }}
-    </div>
-    <div>{{ selectedContact.phone }}</div>
-    <div>
-      <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
-    </div>
-    <p>{{ selectedContact.bio }}</p>
-  </div>
-</ng-template>

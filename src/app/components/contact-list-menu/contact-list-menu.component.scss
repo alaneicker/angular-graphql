@@ -1,0 +1,36 @@
+.contact-list-menu {
+    background: #333;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 100%;
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+
+    & > * {
+        flex: 0 33.333%;
+        max-width: 20%;
+    }
+
+    & > * button {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        display: block;
+    }
+
+    & > * img {
+        display: block;
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        flex: 1;
+        max-width: 300px;
+        max-height: initial;
+
+        & > * {
+            max-width: initial;
+        }
+    }
+}
