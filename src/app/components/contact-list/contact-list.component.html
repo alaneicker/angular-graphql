@@ -6,7 +6,18 @@
       <span class="txt-24 txt-medium">{{ title }}</span>
     </ng-container>
     <ng-container header-right>
-        <a class="txt-16" href="javascript:void(0)" (click)="openAddContactModal()">Add New Contact</a>
+        <ul class="h-list">
+          <li>
+            <a class="txt-16" 
+               href="javascript:void(0)" 
+               (click)="openAddContactModal()">Add New Contact</a>
+          </li>
+          <li>
+              <a class="txt-16"
+                 href="javascript:void(0)"
+                 (click)="toggleMenu()">My Contacts</a>
+          </li>
+        </ul>
     </ng-container>
   </app-header>
 
@@ -14,6 +25,7 @@
 
     <app-contact-list-menu 
       [contacts]="allContacts"
+      [isOpen]="menuIsOpen"
       (selection)="getContact($event)">
     </app-contact-list-menu>
 

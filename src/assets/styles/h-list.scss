@@ -1,0 +1,10 @@
+.h-list {
+
+    & > * {
+        display: inline-block;
+    }
+
+    & > * + * {
+        margin-left: 16px;
+    }
+}

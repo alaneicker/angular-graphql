@@ -8,6 +8,7 @@ import { IContact } from '../../interfaces/contact.interface';
 })
 export class ContactListMenuComponent implements OnInit {
   @Input() contacts: IContact[];
+  @Input() isOpen: Boolean;
   @Output() selection: EventEmitter<any> = new EventEmitter();
 
   constructor() { }

@@ -18,6 +18,7 @@ export class ContactListComponent implements OnInit {
   showToast = false;
   loading = true;
   showAddContactModal = false;
+  menuIsOpen = false;
 
   @Input() title: string;
 
@@ -40,6 +41,10 @@ export class ContactListComponent implements OnInit {
 
   submitAddContactForm() {
     this.showAddContactModal = false;
+  }
+
+  toggleMenu() {
+    this.menuIsOpen = this.menuIsOpen ? false : true;
   }
 
   getFirstIds() {
