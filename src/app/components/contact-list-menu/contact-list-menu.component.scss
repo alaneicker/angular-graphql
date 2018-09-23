@@ -1,5 +1,9 @@
 :host {
-    flex: 0 0 300px;
+    flex: 0;
+
+    @media (min-width: 768px) {
+        flex: 0 0 300px;
+    }
 }
 
 .contact-list-menu {
