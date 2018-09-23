@@ -18,6 +18,12 @@ module.exports = `
             img_url: String!,
             address: AddressInput
         ): Contact
+        deleteContact(
+            id: Int!
+        ): Id
+    }
+    type Id {
+        id: Int
     }
     type Contact {
         id: Int

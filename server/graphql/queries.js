@@ -27,8 +27,13 @@ const queries = () => {
     }
 
     // Creates a contact
-    const createContact = (contact) => {
+    const createContact = contact => {
         return Contacts.create(contact);
+    }
+
+    // Deletes a contact
+    const deleteContact = args => {
+        return Contacts.remove({ id: args.id });
     }
 
     return {
@@ -37,6 +42,7 @@ const queries = () => {
         contact: contact,
         contactByName: getContactByName,
         createContact: createContact,
+        deleteContact: deleteContact,
     };
 };
 

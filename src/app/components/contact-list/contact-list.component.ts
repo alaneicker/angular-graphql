@@ -74,7 +74,7 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  async getContact(e?) {
+  getContact(e?: any) {
     this.selectedContactId = typeof e.target !== 'undefined' ? e.target.value : e;
     this.menuIsOpen = false;
 
@@ -90,7 +90,7 @@ export class ContactListComponent implements OnInit {
       });
   }
 
-  createContact(formData) {
+  createContact(formData: any) {
     this.queryService.mutation(`
       mutation {
         createContact(
@@ -137,7 +137,19 @@ export class ContactListComponent implements OnInit {
 
   // TODO: Delete Contact
   deleteContact(id: number) {
+    const itemIndex = this.allContacts.findIndex(item => item.id === id);
+    const prevItemId = this.allContacts[itemIndex - 1].id;
 
+    this.queryService.mutation(`
+      mutation {
+        deleteContact(id: ${id}) {
+          id
+        }
+      }
+    `).then(res => {
+      this.allContacts.splice(itemIndex, 1);
+      this.getContact(prevItemId);
+    });
   }
 
 }

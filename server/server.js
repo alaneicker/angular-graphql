@@ -14,6 +14,7 @@ const resolvers = {
     contact: q.contact,
     contactByName: q.contactByName,
     createContact: q.createContact,
+    deleteContact: q.deleteContact,
 };
 
 app.use(cors());

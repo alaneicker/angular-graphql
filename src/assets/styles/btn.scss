@@ -11,4 +11,16 @@
     &:hover {
         background: darken(#0c78af, 7%);
     }
+
+    &--sm {
+        padding: 12px 18px;
+    }
+
+    &--secondary {
+        background: #ef300e;
+
+        &:hover {
+            background: darken(#ef300e, 7%);
+        }
+    }
 }

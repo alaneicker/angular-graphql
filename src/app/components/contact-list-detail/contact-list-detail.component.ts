@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IContact } from '../../interfaces/contact.interface';
 
 @Component({
@@ -8,10 +8,15 @@ import { IContact } from '../../interfaces/contact.interface';
 })
 export class ContactListDetailComponent implements OnInit {
   @Input() selectedContact: IContact;
+  @Output() delete: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  deleteContact(id: number) {
+    this.delete.emit(id);
   }
 
 }

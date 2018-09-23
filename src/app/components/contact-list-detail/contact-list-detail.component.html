@@ -33,7 +33,13 @@
           <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
         </div>
 
-        <p>{{ selectedContact.bio }}</p>
+        <div class="vr">
+            <p>{{ selectedContact.bio }}</p>
+        </div>
+
+        <button 
+          class="btn btn--sm btn--secondary"
+          (click)="deleteContact(selectedContact.id)">Delete</button>
 
       </div>
     </ng-template>

@@ -30,7 +30,8 @@
     </app-contact-list-menu>
 
     <app-contact-list-detail 
-      [selectedContact]="selectedContact">
+      [selectedContact]="selectedContact"
+      (delete)="deleteContact($event)">
     </app-contact-list-detail>
 
   </div>
