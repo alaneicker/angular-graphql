@@ -10,7 +10,7 @@ const q = queries();
 
 const resolvers = {
     getFirstContact: q.getFirstContact,
-    getAllContactNames: q.getAllContactNames,
+    allContacts: q.allContacts,
     contact: q.contact,
     contactByName: q.contactByName,
     createContact: q.createContact,
