@@ -19,3 +19,12 @@ export const contactFragment = `
     zip
   }
 `;
+
+export const contactsMenuFragment = `
+  id
+  img_url
+  name {
+    first
+    last
+  }
+`;

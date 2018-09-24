@@ -32,6 +32,7 @@
 
     <app-contact-list-detail 
       [selectedContact]="selectedContact"
+      (update)="updateContact($event)"
       (delete)="deleteContact($event)">
     </app-contact-list-detail>
 
@@ -47,7 +48,10 @@
     </ng-container>
     <ng-container modal-body>
         <div class="padding-32">
-          <app-add-contact-form (onsubmit)="createContact($event)"></app-add-contact-form>
+          <app-add-contact-form 
+            [formData]="itemToUpdate"
+            (onsubmit)="createContact($event)">
+          </app-add-contact-form>
         </div>
     </ng-container>
 </app-modal>

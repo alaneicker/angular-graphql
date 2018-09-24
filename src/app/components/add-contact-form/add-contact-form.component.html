@@ -93,10 +93,11 @@
     <textarea id="bio" formControlName="bio"></textarea>
     <small>Bio is required.</small>
   </div>
-
-  <ng-container *ngIf="onsubmit">
-    <div class="vr-2"></div>
-    <button class="btn" type="submit">Submit</button>
-  </ng-container>
+  
+  <div class="vr-2"></div>
+  
+  <!-- <ng-container *ngIf="onsubmit"> -->
+    <button class="btn" type="submit">{{ formData ? 'Update' : 'Create' }}</button>
+  <!-- </ng-container> -->
 
 </form>

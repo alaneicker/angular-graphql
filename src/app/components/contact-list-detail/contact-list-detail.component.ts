@@ -9,10 +9,15 @@ import { IContact } from '../../interfaces/contact.interface';
 export class ContactListDetailComponent implements OnInit {
   @Input() selectedContact: IContact;
   @Output() delete: EventEmitter<any> = new EventEmitter();
+  @Output() update: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateContact(selectedContact: IContact) {
+    this.update.emit(selectedContact);
   }
 
   deleteContact(id: number) {

@@ -40,6 +40,10 @@
         <hr>
 
         <button 
+          class="btn btn--sm"
+          (click)="updateContact(selectedContact)">Update</button>
+
+        <button 
           class="btn btn--sm btn--secondary"
           (click)="deleteContact(selectedContact.id)">Delete</button>
 

@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { IContact } from '../../interfaces/contact.interface';
 import { QueryService } from '../../services/query.service';
-import { contactFragment } from '../../gql-query-fragments/contacts';
+import { contactFragment, contactsMenuFragment } from '../../gql-query-fragments/contacts';
 
 @Component({
   providers: [QueryService],
@@ -19,6 +19,7 @@ export class ContactListComponent implements OnInit {
   loading = true;
   showAddContactModal = false;
   menuIsOpen = false;
+  itemToUpdate = null;
 
   @Input() title: string;
 
@@ -33,6 +34,7 @@ export class ContactListComponent implements OnInit {
 
   closeAddContactModal() {
     this.showAddContactModal = false;
+    this.itemToUpdate = null;
   }
 
   openAddContactModal() {
@@ -63,12 +65,7 @@ export class ContactListComponent implements OnInit {
     this.queryService.query(`
       query allContacts {
         allContacts {
-          id
-          img_url
-          name {
-            first
-            last
-          }
+          ${contactsMenuFragment}
         }
       }
     `).then(res => {
@@ -116,12 +113,7 @@ export class ContactListComponent implements OnInit {
             zip: "${formData.zip}"
           }
         ) {
-          id
-          img_url
-          name {
-            first
-            last
-          }
+          ${contactsMenuFragment}
         }
       }
     `).then(res => {
@@ -132,12 +124,11 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  // TODO: Update Contact
-  updateContact(id: number) {
-
+  updateContact(contact: IContact) {
+    this.itemToUpdate = contact;
+    this.openAddContactModal();
   }
 
-  // TODO: Delete Contact
   deleteContact(id: number) {
     const itemIndex = this.allContacts.findIndex(item => item.id === id);
     const prevItemId = this.allContacts[itemIndex - 1].id;
