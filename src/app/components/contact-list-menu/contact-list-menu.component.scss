@@ -31,11 +31,16 @@
         background: transparent;
         padding: 0;
         display: block;
+        outline: 0;
     }
 
     & > * img {
         display: block;
         width: 100%;
+
+        &.is-selected {
+            // Selected styling
+        }
     }
 
     @media (min-width: 768px) {

@@ -7,6 +7,7 @@ import { IContact } from '../../interfaces/contact.interface';
   styleUrls: ['./contact-list-menu.component.scss']
 })
 export class ContactListMenuComponent implements OnInit {
+  @Input() selectedContactId: number;
   @Input() contacts: IContact[];
   @Input() isOpen: Boolean;
   @Output() selection: EventEmitter<any> = new EventEmitter();

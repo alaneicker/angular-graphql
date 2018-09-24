@@ -55,7 +55,6 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      alert(JSON.stringify(res));
       this.selectedContact = res.data.getFirstContact[0];
     });
   }

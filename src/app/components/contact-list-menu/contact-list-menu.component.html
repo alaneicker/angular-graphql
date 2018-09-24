@@ -2,6 +2,7 @@
   <li *ngFor="let contact of contacts; let i = index">
     <button (click)="setAsSelected(contact.id)">
       <img 
+        [class.is-selected]="selectedContactId == contact.id"
         [src]="contact.img_url" 
         [alt]="contact.name.first + ' ' + contact.name.last">
     </button>
