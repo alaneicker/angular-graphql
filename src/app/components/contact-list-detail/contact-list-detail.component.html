@@ -9,14 +9,16 @@
       <div class="contact-list-detail__profile-content">
         <h1>
           {{ selectedContact.name.first }}
-          {{ selectedContact.name.mi }}
+          <ng-container *ngIf="selectedContact.mi != ''">
+            {{ selectedContact.name.mi }}
+          </ng-container>
           {{ selectedContact.name.last }}
         </h1>
         <h2>{{ selectedContact.job_title }}</h2>
         
         <div>
           {{ selectedContact.address.addr1 }}
-          <ng-container *ngIf="selectedContact.address.addr2">
+          <ng-container *ngIf="selectedContact.address.addr2 != ''">
             {{ selectedContact.address.addr2_type }}
             {{ selectedContact.address.addr2 }},
           </ng-container>

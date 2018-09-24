@@ -109,7 +109,7 @@ export class ContactListComponent implements OnInit {
       name: {
         first: "${form.firstName}",
         last: "${form.lastName}",
-        mi: "${form.mi}"
+        mi: "${form.mi || ''}"
       },
       job_title: "${form.jobTitle}",
       email: "${form.email}",
@@ -118,8 +118,8 @@ export class ContactListComponent implements OnInit {
       img_url: "${form.imgUrl}",
       address: {
         addr1: "${form.address}",
-        addr2: "${form.address2}",
-        addr2_type: "${form.address2Type}",
+        addr2: "${form.address2 || ''}",
+        addr2_type: "${form.address2Type || ''}",
         city: "${form.city}",
         state: "${form.state}",
         zip: "${form.zip}"
