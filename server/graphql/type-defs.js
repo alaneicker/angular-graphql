@@ -19,6 +19,16 @@ module.exports = `
             img_url: String!,
             address: AddressInput
         ): Contact
+        updateContact(
+            id: Int!,
+            name: NameInput,
+            job_title: String!,
+            email: String!,
+            phone: String!,
+            bio: String!,
+            img_url: String!,
+            address: AddressInput
+        ): Contact
         deleteContact(
             id: Int!
         ): Id

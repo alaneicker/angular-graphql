@@ -50,6 +50,14 @@ export class AddContactFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+
+    if (this.formData) {
+      this.form.value.isUpdate = true;
+      this.form.value.id = this.formData.id;
+    } else {
+      this.form.value.id = Math.round(Math.random() * 1000000);
+    }
+
     if (form.valid) {
       this.onsubmit.emit(this.form.value);
     }

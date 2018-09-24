@@ -28,3 +28,10 @@ export const contactsMenuFragment = `
     last
   }
 `;
+
+export const contactNameFragment = `
+  name {
+    first
+    last
+  }
+`;

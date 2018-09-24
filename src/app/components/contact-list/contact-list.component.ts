@@ -2,7 +2,12 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { IContact } from '../../interfaces/contact.interface';
 import { QueryService } from '../../services/query.service';
-import { contactFragment, contactsMenuFragment } from '../../gql-query-fragments/contacts';
+
+import {
+  contactFragment,
+  contactsMenuFragment,
+  contactNameFragment,
+} from '../../gql-query-fragments/contacts';
 
 @Component({
   providers: [QueryService],
@@ -57,8 +62,11 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.selectedContact = res.data.getFirstContact[0];
-    });
+        this.selectedContact = res.data.getFirstContact[0];
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   getAllContactImgUrls() {
@@ -69,8 +77,11 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.allContacts = res.data.allContacts;
-    });
+        this.allContacts = res.data.allContacts;
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   getContact(e?: any) {
@@ -86,42 +97,68 @@ export class ContactListComponent implements OnInit {
     `).then(res => {
         this.selectedContact = res.data.contact;
         this.loading = false;
+      })
+      .catch(err => {
+        console.log(err);
       });
   }
 
-  createContact(formData: any) {
-    this.queryService.mutation(`
-      mutation {
-        createContact(
-          id: ${Math.round(Math.random() * 1000000)},
-          name: {
-            first: "${formData.firstName}",
-            last: "${formData.lastName}",
-            mi: "${formData.mi}"
-          },
-          job_title: "${formData.jobTitle}",
-          email: "${formData.email}",
-          phone: "${formData.phone}",
-          bio: "${formData.bio}",
-          img_url: "${formData.imgUrl}",
-          address: {
-            addr1: "${formData.address}",
-            addr2: "${formData.address2}",
-            addr2_type: "${formData.address2Type}",
-            city: "${formData.city}",
-            state: "${formData.state}",
-            zip: "${formData.zip}"
-          }
-        ) {
-          ${contactsMenuFragment}
-        }
+  saveContact(form: any) {
+    const queryFragment = `
+      id: ${form.id},
+      name: {
+        first: "${form.firstName}",
+        last: "${form.lastName}",
+        mi: "${form.mi}"
+      },
+      job_title: "${form.jobTitle}",
+      email: "${form.email}",
+      phone: "${form.phone}",
+      bio: "${form.bio}",
+      img_url: "${form.imgUrl}",
+      address: {
+        addr1: "${form.address}",
+        addr2: "${form.address2}",
+        addr2_type: "${form.address2Type}",
+        city: "${form.city}",
+        state: "${form.state}",
+        zip: "${form.zip}"
       }
-    `).then(res => {
-      this.allContacts.push(res.data.createContact);
-      this.getContact(res.data.createContact.id);
-      this.showAddContactModal = false;
-      this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
-    });
+    `;
+
+    if (form.isUpdate) {
+      this.queryService.mutation(`
+        mutation {
+          createContact(
+            ${queryFragment}
+          ) {
+            ${contactNameFragment}
+          }
+        }
+      `).then(res => {
+          alert('Updated!!');
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    } else {
+      this.queryService.mutation(`
+        mutation {
+          createContact(
+            ${queryFragment}
+          ) {
+            ${contactsMenuFragment}
+          }
+        }
+      `).then(res => {
+          this.allContacts.push(res.data.createContact);
+          this.getContact(form.id);
+          this.showAddContactModal = false;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
   }
 
   updateContact(contact: IContact) {
@@ -140,9 +177,12 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.allContacts.splice(itemIndex, 1);
-      this.getContact(prevItemId);
-    });
+        this.allContacts.splice(itemIndex, 1);
+        this.getContact(prevItemId);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
 }
