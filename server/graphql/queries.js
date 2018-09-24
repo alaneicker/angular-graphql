@@ -7,13 +7,13 @@ const queries = () => {
 
     'use strict';
 
-    const getFirstIds = () => {
-        return Contacts.find({});
+    const getFirstContact = () => {
+        return Contacts.find().limit(1);
     }
 
     // Gets all contacts
-    const allContacts = () => {
-        return Contacts.find({});
+    const getAllContacts = () => {
+        return Contacts.find();
     }
 
     // Gets a single contact
@@ -37,8 +37,8 @@ const queries = () => {
     }
 
     return {
-        getFirstIds: getFirstIds,
-        allContacts: allContacts,
+        getFirstContact: getFirstContact,
+        getAllContacts: getAllContacts,
         contact: contact,
         contactByName: getContactByName,
         createContact: createContact,

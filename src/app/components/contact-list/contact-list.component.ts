@@ -11,7 +11,7 @@ import { contactFragment } from '../../gql-query-fragments/contacts';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
-  allContacts: IContact[];
+  getAllContacts: IContact[];
   selectedContact: IContact;
   selectedContactId: number;
   confirmationString: string;
@@ -27,7 +27,7 @@ export class ContactListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getFirstIds();
+    this.getFirstContact();
     this.getAllContactImgUrls();
   }
 
@@ -47,20 +47,22 @@ export class ContactListComponent implements OnInit {
     this.menuIsOpen = this.menuIsOpen ? false : true;
   }
 
-  getFirstIds() {
+  getFirstContact() {
     this.queryService.query(`
-      query allContacts {
-        allContacts { id }
+      query getFirstContact {
+        getFirstContact {
+          ${contactFragment}
+        }
       }
     `).then(res => {
-      this.getContact(res.data.allContacts[0].id);
+      this.selectedContact = res.data.getFirstContact[0];
     });
   }
 
   getAllContactImgUrls() {
     this.queryService.query(`
-      query allContacts {
-        allContacts {
+      query getAllContacts {
+        getAllContacts {
           id
           img_url
           name {
@@ -70,7 +72,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.allContacts = res.data.allContacts;
+      this.getAllContacts = res.data.getAllContacts;
     });
   }
 
@@ -123,7 +125,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.allContacts.push(res.data.createContact);
+      this.getAllContacts.push(res.data.createContact);
       this.getContact(res.data.createContact.id);
       this.showAddContactModal = false;
       this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
@@ -137,8 +139,8 @@ export class ContactListComponent implements OnInit {
 
   // TODO: Delete Contact
   deleteContact(id: number) {
-    const itemIndex = this.allContacts.findIndex(item => item.id === id);
-    const prevItemId = this.allContacts[itemIndex - 1].id;
+    const itemIndex = this.getAllContacts.findIndex(item => item.id === id);
+    const prevItemId = this.getAllContacts[itemIndex - 1].id;
 
     this.queryService.mutation(`
       mutation {
@@ -147,7 +149,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.allContacts.splice(itemIndex, 1);
+      this.getAllContacts.splice(itemIndex, 1);
       this.getContact(prevItemId);
     });
   }

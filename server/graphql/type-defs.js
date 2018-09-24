@@ -1,11 +1,12 @@
 module.exports = `
     type Query {
         contact(id: Int!): Contact
-        allContacts: [Contact]
+        getAllContacts: [Contact]
         contactByName(
             first_name: String!,
             last_name: String!
         ): Contact
+        getFirstContact: [Contact]
     },
     type Mutation {
         createContact(
