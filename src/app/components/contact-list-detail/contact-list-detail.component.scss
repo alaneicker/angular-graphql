@@ -20,7 +20,7 @@
     }
 
     &__profile-image > * {
-        width: 250px;
+        width: 150px;
         border-radius: 50%;
         margin-bottom: 16px;
     }
@@ -36,6 +36,7 @@
         }
 
         &__profile-image > * {
+            width: 250px;
             margin-bottom: 0;
         }
     }
