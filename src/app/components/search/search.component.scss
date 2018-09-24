@@ -1,5 +1,6 @@
 .search {
     display: flex;
+    border-bottom: 1px solid #ddd;
     
     &__input {
         border: 0;
@@ -21,5 +22,9 @@
         &:hover {
             background-color: darken(#0c78af, 7%);
         }
+    }
+
+    @media(min-width: 768px) {
+        border-bottom: 0;
     }
 }
