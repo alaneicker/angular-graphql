@@ -1,7 +1,7 @@
 module.exports = `
     type Query {
         contact(id: Int!): Contact
-        getAllContacts: [Contact]
+        getAllContactNames: [Contact]
         contactByName(
             first_name: String!,
             last_name: String!

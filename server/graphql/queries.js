@@ -12,7 +12,7 @@ const queries = () => {
     }
 
     // Gets all contacts
-    const getAllContacts = () => {
+    const getAllContactNames = () => {
         return Contacts.find();
     }
 
@@ -38,7 +38,7 @@ const queries = () => {
 
     return {
         getFirstContact: getFirstContact,
-        getAllContacts: getAllContacts,
+        getAllContactNames: getAllContactNames,
         contact: contact,
         contactByName: getContactByName,
         createContact: createContact,

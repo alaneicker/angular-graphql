@@ -11,7 +11,7 @@ import { contactFragment } from '../../gql-query-fragments/contacts';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
-  getAllContacts: IContact[];
+  getAllContactNames: IContact[];
   selectedContact: IContact;
   selectedContactId: number;
   confirmationString: string;
@@ -61,8 +61,8 @@ export class ContactListComponent implements OnInit {
 
   getAllContactImgUrls() {
     this.queryService.query(`
-      query getAllContacts {
-        getAllContacts {
+      query getAllContactNames {
+        getAllContactNames {
           id
           img_url
           name {
@@ -72,7 +72,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.getAllContacts = res.data.getAllContacts;
+      this.getAllContactNames = res.data.getAllContactNames;
     });
   }
 
@@ -125,7 +125,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.getAllContacts.push(res.data.createContact);
+      this.getAllContactNames.push(res.data.createContact);
       this.getContact(res.data.createContact.id);
       this.showAddContactModal = false;
       this.confirmationString = `New contact created for <b>${res.data.createContact.name.first} ${res.data.createContact.name.last}</b>`;
@@ -139,8 +139,8 @@ export class ContactListComponent implements OnInit {
 
   // TODO: Delete Contact
   deleteContact(id: number) {
-    const itemIndex = this.getAllContacts.findIndex(item => item.id === id);
-    const prevItemId = this.getAllContacts[itemIndex - 1].id;
+    const itemIndex = this.getAllContactNames.findIndex(item => item.id === id);
+    const prevItemId = this.getAllContactNames[itemIndex - 1].id;
 
     this.queryService.mutation(`
       mutation {
@@ -149,7 +149,7 @@ export class ContactListComponent implements OnInit {
         }
       }
     `).then(res => {
-      this.getAllContacts.splice(itemIndex, 1);
+      this.getAllContactNames.splice(itemIndex, 1);
       this.getContact(prevItemId);
     });
   }
