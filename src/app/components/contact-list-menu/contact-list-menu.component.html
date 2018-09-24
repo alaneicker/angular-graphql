@@ -1,3 +1,5 @@
+<app-search></app-search>
+
 <ul class="contact-list-menu" [class.is-open]="isOpen">
   <li *ngFor="let contact of contacts; let i = index">
     <button (click)="setAsSelected(contact.id)">

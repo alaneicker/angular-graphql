@@ -15,6 +15,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContactListMenuComponent } from './components/contact-list-menu/contact-list-menu.component';
 import { ContactListDetailComponent } from './components/contact-list-detail/contact-list-detail.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ContactListDetailComponent } from './components/contact-list-detail/con
     HeaderComponent,
     ContactListMenuComponent,
     ContactListDetailComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
