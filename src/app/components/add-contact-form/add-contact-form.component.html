@@ -7,17 +7,29 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input" [class.input--has-error]="form.get('firstName').errors && _form.submitted">
       <label for="first-name">First Name</label>
-      <input id="first-name" type="text" formControlName="firstName">
+      <input 
+        id="first-name" 
+        type="text" 
+        formControlName="firstName" 
+        [(ngModel)]="formData && formData?.name.first">
       <small>First name is required.</small>
     </div>
     <div class="input" [class.input--has-error]="form.get('lastName').errors && _form.submitted">
       <label for="last-name">Last Name</label>
-      <input id="last-name" type="text" formControlName="lastName">
+      <input 
+        id="last-name" 
+        type="text" 
+        formControlName="lastName"
+        [(ngModel)]="formData && formData?.name.last">
       <small>Last name is required.</small>
     </div>
     <div class="input input--sm">
       <label for="mi">MI</label>
-      <input id="mi" type="text" formControlName="mi">
+      <input 
+        id="mi" 
+        type="text" 
+        formControlName="mi"
+        [(ngModel)]="formData && formData?.name.mi">
     </div>
   </div>
 
@@ -26,12 +38,20 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input" [class.input--has-error]="form.get('email').errors && _form.submitted">
       <label for="email">Email</label>
-      <input id="email" type="text" formControlName="email">
+      <input 
+        id="email" 
+        type="text" 
+        formControlName="email"
+        [(ngModel)]="formData && formData.email">
       <small>Valid email address name is required.</small>
     </div>
     <div class="input" [class.input--has-error]="form.get('phone').errors && _form.submitted">
       <label for="phone">Phone</label>
-      <input id="phone" type="text" formControlName="phone">
+      <input 
+        id="phone" 
+        type="text" 
+        formControlName="phone"
+        [(ngModel)]="formData && formData.phone">
       <small>Phone number is required.</small>
     </div>
   </div>
@@ -41,33 +61,57 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input" [class.input--has-error]="form.get('address').errors && _form.submitted">
       <label for="street">Street Address</label>
-      <input id="street" type="text" formControlName="address">
+      <input 
+        id="street" 
+        type="text" 
+        formControlName="address"
+        [(ngModel)]="formData && formData?.address.addr1">
       <small>Street Address is required.</small>
     </div>
     <div class="input input--md">
       <label for="addr-2">Address 2</label>
-      <input id="addr-2" type="text" formControlName="address2">
+      <input 
+        id="addr-2" 
+        type="text" 
+        formControlName="address2"
+        [(ngModel)]="formData && formData?.address.addr2">
     </div>
     <div class="input input--md">
       <label for="addr-2">APt / Unit</label>
-      <input id="addr-2-type" type="text" formControlName="address2Type">
+      <input 
+        id="addr-2-type" 
+        type="text" 
+        formControlName="address2Type"
+        [(ngModel)]="formData && formData?.address.addr2_type">
     </div>
   </div>
   
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input" [class.input--has-error]="form.get('city').errors && _form.submitted">
       <label for="city">City</label>
-      <input id="city" type="text" formControlName="city">
+      <input 
+        id="city" 
+        type="text" 
+        formControlName="city"
+        [(ngModel)]="formData && formData?.address.city">
       <small>City is required.</small>
     </div>
     <div class="input input--md" [class.input--has-error]="form.get('state').errors && _form.submitted">
       <label for="state">State</label>
-      <input id="state" type="text" formControlName="state">
+      <input 
+        id="state" 
+        type="text" 
+        formControlName="state"
+        [(ngModel)]="formData && formData?.address.state">
       <small>State is required.</small>
     </div>
     <div class="input input--md" [class.input--has-error]="form.get('zip').errors && _form.submitted">
       <label for="zip">Zip Code</label>
-      <input id="zip" type="text" formControlName="zip">
+      <input 
+        id="zip" 
+        type="text" 
+        formControlName="zip"
+        [(ngModel)]="formData && formData?.address.zip">
       <small>Zip code is required.</small>
     </div>
   </div>
@@ -77,12 +121,20 @@
   <div class="u-flex u-flex--hr u-flex--equalCols">
     <div class="input" [class.input--has-error]="form.get('jobTitle').errors && _form.submitted">
       <label for="job-title">Job Title</label>
-      <input id="job-title" type="text" formControlName="jobTitle">
+      <input 
+        id="job-title" 
+        type="text" 
+        formControlName="jobTitle"
+        [(ngModel)]="formData && formData.job_title">
       <small>Job title is required.</small>
     </div>
     <div class="input" [class.input--has-error]="form.get('imgUrl').errors && _form.submitted">
       <label for="profile-pic">Profile Pic URL</label>
-      <input id="profile-pic" type="text" formControlName="imgUrl">
+      <input 
+        id="profile-pic" 
+        type="text" 
+        formControlName="imgUrl"
+        [(ngModel)]="formData && formData.img_url">
     </div>
   </div>
 
@@ -90,14 +142,17 @@
 
   <div class="input" [class.input--has-error]="form.get('bio').errors && _form.submitted">
     <label for="bio">Bio</label>
-    <textarea id="bio" formControlName="bio"></textarea>
+    <textarea 
+      id="bio" 
+      formControlName="bio"
+      [(ngModel)]="formData && formData.bio"></textarea>
     <small>Bio is required.</small>
   </div>
   
   <div class="vr-2"></div>
   
-  <!-- <ng-container *ngIf="onsubmit"> -->
+  <ng-container *ngIf="onsubmit">
     <button class="btn" type="submit">{{ formData ? 'Update' : 'Create' }}</button>
-  <!-- </ng-container> -->
+  </ng-container>
 
 </form>

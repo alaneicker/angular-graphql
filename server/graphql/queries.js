@@ -38,8 +38,9 @@ const queries = () => {
     };
 
     // Updates a contact
-    const updateContact = args => {
-        return args;
+    const updateContact = contact => {
+        //return contact;
+        return Contacts.update({ id: contact.id }, contact, { upsert: true });
     };
 
     return {

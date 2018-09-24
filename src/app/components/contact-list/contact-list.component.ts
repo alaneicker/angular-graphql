@@ -129,14 +129,14 @@ export class ContactListComponent implements OnInit {
     if (form.isUpdate) {
       this.queryService.mutation(`
         mutation {
-          createContact(
+          updateContact(
             ${queryFragment}
           ) {
-            ${contactNameFragment}
+            ${contactFragment}
           }
         }
       `).then(res => {
-          alert('Updated!!');
+          this.showAddContactModal = false;
         })
         .catch(err => {
           console.log(err);
