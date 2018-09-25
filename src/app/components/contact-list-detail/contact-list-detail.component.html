@@ -52,6 +52,7 @@
 
   <app-modal 
     *ngIf="showDeleteModal"
+    [showCloseBtn]="false"
     [classes]="'modal--sm'"
     (close)="closeDeleteModal()">
     <ng-container modal-header>
