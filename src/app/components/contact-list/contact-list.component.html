@@ -24,7 +24,7 @@
   <div class="contact-list">
 
     <app-contact-list-menu 
-      [selectedContactId]="selectedContact.id"
+      [selectedContactId]="selectedContact?.id"
       [contacts]="allContacts"
       [isOpen]="menuIsOpen"
       (selection)="getContact($event)">
