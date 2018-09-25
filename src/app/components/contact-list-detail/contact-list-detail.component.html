@@ -45,7 +45,32 @@
 
       <button 
         class="btn btn--sm btn--secondary"
-        (click)="deleteContact(selectedContact.id)">Delete</button>
+        (click)="openDeleteModal()">Delete</button>
 
     </div>
   </div>
+
+  <app-modal 
+    *ngIf="showDeleteModal"
+    [classes]="'modal--sm'"
+    (close)="closeDeleteModal()">
+    <ng-container modal-header>
+      Delete 
+      {{ selectedContact.name.first }}
+      <ng-container *ngIf="selectedContact.name.mi != ''">
+        {{ selectedContact.name.mi }}
+      </ng-container>
+      {{ selectedContact.name.last }}?
+    </ng-container>
+    <ng-container modal-body>
+      <div class="padding-32">
+        <div class="vr-2">Deleting this contact will permanently remove it.</div>
+        <button 
+          class="btn btn--sm"
+          (click)="deleteContact(selectedContact.id)">I'm Sure</button>
+        <button 
+          class="btn btn--sm btn--secondary"
+          (click)="closeDeleteModal()">Cancel</button>
+      </div>
+    </ng-container>
+</app-modal>

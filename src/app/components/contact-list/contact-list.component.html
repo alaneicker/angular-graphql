@@ -41,10 +41,9 @@
 
 <app-modal 
   *ngIf="showAddContactModal"
-  [title]="'Add New Contact'"
   (close)="closeAddContactModal($event)">
     <ng-container modal-header>
-      Add New Contact
+      {{ itemToUpdate ? 'Update' : 'Add New' }} Contact
     </ng-container>
     <ng-container modal-body>
         <div class="padding-32">

@@ -53,5 +53,9 @@
             flex: 0 75%;
             max-height: 90%;
         }
+
+        &--sm > &__window {
+            flex: 0 50%;
+        }
     }
 }

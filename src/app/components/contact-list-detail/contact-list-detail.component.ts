@@ -11,9 +11,19 @@ export class ContactListDetailComponent implements OnInit {
   @Output() delete: EventEmitter<any> = new EventEmitter();
   @Output() update: EventEmitter<any> = new EventEmitter();
 
+  showDeleteModal = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openDeleteModal() {
+    this.showDeleteModal = true;
+  }
+
+  closeDeleteModal() {
+    this.showDeleteModal = false;
   }
 
   updateContact(selectedContact: IContact) {
@@ -22,6 +32,7 @@ export class ContactListDetailComponent implements OnInit {
 
   deleteContact(id: number) {
     this.delete.emit(id);
+    this.closeDeleteModal();
   }
 
 }
