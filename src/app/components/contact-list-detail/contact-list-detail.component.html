@@ -1,40 +1,40 @@
 <div class="contact-list-detail">
     <div class="contact-list-detail__profile-image">
       <img
-        [src]="selectedContact.img_url"
-        [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
+        [src]="selectedContact?.img_url"
+        [alt]="selectedContact?.name.first + ' ' + selectedContact?.name.last">
     </div>
     <div class="contact-list-detail__profile-content">
       <h1>
-        {{ selectedContact.name.first }}
-        <ng-container *ngIf="selectedContact.name.mi != ''">
-          {{ selectedContact.name.mi }}
+        {{ selectedContact?.name.first }}
+        <ng-container *ngIf="selectedContact?.name.mi != ''">
+          {{ selectedContact?.name.mi }}
         </ng-container>
-        {{ selectedContact.name.last }}
+        {{ selectedContact?.name.last }}
       </h1>
-      <h2>{{ selectedContact.job_title }}</h2>
+      <h2>{{ selectedContact?.job_title }}</h2>
       
       <div>
-        {{ selectedContact.address.addr1 }}
-        <ng-container *ngIf="selectedContact.address.addr2 != ''">
-          {{ selectedContact.address.addr2_type }}
-          {{ selectedContact.address.addr2 }},
+        {{ selectedContact?.address.addr1 }}
+        <ng-container *ngIf="selectedContact?.address.addr2 != ''">
+          {{ selectedContact?.address.addr2_type }}
+          {{ selectedContact?.address.addr2 }},
         </ng-container>
-        {{ selectedContact.address.city }},
-        {{ selectedContact.address.state }}
-        {{ selectedContact.address.zip }}
+        {{ selectedContact?.address.city }},
+        {{ selectedContact?.address.state }}
+        {{ selectedContact?.address.zip }}
       </div>
       
       <div>
-        {{ selectedContact.phone }}
+        {{ selectedContact?.phone }}
       </div>
 
       <div>
-        <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
+        <a [href]="'mailto:' + selectedContact?.email">{{ selectedContact?.email }}</a>
       </div>
 
       <div class="vr">
-          <p class="txt-left">{{ selectedContact.bio }}</p>
+          <p class="txt-left">{{ selectedContact?.bio }}</p>
       </div>
 
       <hr>
@@ -57,18 +57,18 @@
     (close)="closeDeleteModal()">
     <ng-container modal-header>
       Delete 
-      {{ selectedContact.name.first }}
-      <ng-container *ngIf="selectedContact.name.mi != ''">
-        {{ selectedContact.name.mi }}
+      {{ selectedContact?.name.first }}
+      <ng-container *ngIf="selectedContact?.name.mi != ''">
+        {{ selectedContact?.name.mi }}
       </ng-container>
-      {{ selectedContact.name.last }}?
+      {{ selectedContact?.name.last }}?
     </ng-container>
     <ng-container modal-body>
       <div class="padding-32">
         <div class="vr-2">Deleting this contact will permanently remove it.</div>
         <button 
           class="btn btn--sm"
-          (click)="deleteContact(selectedContact.id)">I'm Sure</button>
+          (click)="deleteContact(selectedContact?.id)">I'm Sure</button>
         <button 
           class="btn btn--sm btn--secondary"
           (click)="closeDeleteModal()">Cancel</button>
