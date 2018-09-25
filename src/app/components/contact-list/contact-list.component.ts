@@ -21,7 +21,6 @@ export class ContactListComponent implements OnInit {
   selectedContactId: number;
   confirmationString: string;
   showToast = false;
-  loading = true;
   showAddContactModal = false;
   menuIsOpen = false;
   itemToUpdate = null;
@@ -96,7 +95,6 @@ export class ContactListComponent implements OnInit {
       }
     `).then(res => {
         this.selectedContact = res.data.contact;
-        this.loading = false;
       })
       .catch(err => {
         console.log(err);

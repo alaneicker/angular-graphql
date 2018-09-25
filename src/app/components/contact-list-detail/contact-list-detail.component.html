@@ -1,54 +1,51 @@
 <div class="contact-list-detail">
-    <ng-container *ngIf="loading; else contact">Loading...</ng-container>
-    <ng-template #contact>
-      <div class="contact-list-detail__profile-image">
-        <img
-          [src]="selectedContact.img_url"
-          [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
+    <div class="contact-list-detail__profile-image">
+      <img
+        [src]="selectedContact.img_url"
+        [alt]="selectedContact.name.first + ' ' + selectedContact.name.last">
+    </div>
+    <div class="contact-list-detail__profile-content">
+      <h1>
+        {{ selectedContact.name.first }}
+        <ng-container *ngIf="selectedContact.name.mi != ''">
+          {{ selectedContact.name.mi }}
+        </ng-container>
+        {{ selectedContact.name.last }}
+      </h1>
+      <h2>{{ selectedContact.job_title }}</h2>
+      
+      <div>
+        {{ selectedContact.address.addr1 }}
+        <ng-container *ngIf="selectedContact.address.addr2 != ''">
+          {{ selectedContact.address.addr2_type }}
+          {{ selectedContact.address.addr2 }},
+        </ng-container>
+        {{ selectedContact.address.city }},
+        {{ selectedContact.address.state }}
+        {{ selectedContact.address.zip }}
       </div>
-      <div class="contact-list-detail__profile-content">
-        <h1>
-          {{ selectedContact.name.first }}
-          <ng-container *ngIf="selectedContact.mi != ''">
-            {{ selectedContact.name.mi }}
-          </ng-container>
-          {{ selectedContact.name.last }}
-        </h1>
-        <h2>{{ selectedContact.job_title }}</h2>
-        
-        <div>
-          {{ selectedContact.address.addr1 }}
-          <ng-container *ngIf="selectedContact.address.addr2 != ''">
-            {{ selectedContact.address.addr2_type }}
-            {{ selectedContact.address.addr2 }},
-          </ng-container>
-          {{ selectedContact.address.city }},
-          {{ selectedContact.address.state }}
-          {{ selectedContact.address.zip }}
-        </div>
-        
-        <div>
-          {{ selectedContact.phone }}
-        </div>
-
-        <div>
-          <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
-        </div>
-
-        <div class="vr">
-            <p class="txt-left">{{ selectedContact.bio }}</p>
-        </div>
-
-        <hr>
-
-        <button 
-          class="btn btn--sm"
-          (click)="updateContact(selectedContact)">Update</button>
-
-        <button 
-          class="btn btn--sm btn--secondary"
-          (click)="deleteContact(selectedContact.id)">Delete</button>
-
+      
+      <div>
+        {{ selectedContact.phone }}
       </div>
-    </ng-template>
+
+      <div>
+        <a [href]="'mailto:' + selectedContact.email">{{ selectedContact.email }}</a>
+      </div>
+
+      <div class="vr">
+          <p class="txt-left">{{ selectedContact.bio }}</p>
+      </div>
+
+      <hr>
+
+      <button 
+        class="btn btn--sm"
+        (click)="updateContact(selectedContact)">Update</button>
+
+      <button 
+        class="btn btn--sm btn--secondary"
+        (click)="deleteContact(selectedContact.id)">Delete</button>
+
+    </div>
   </div>
