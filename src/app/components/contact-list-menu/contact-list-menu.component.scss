@@ -24,6 +24,7 @@
     & > * {
         flex: 0 33.333%;
         max-width: 20%;
+        position: relative;
     }
 
     & > * button {
@@ -37,7 +38,24 @@
     & > * img {
         display: block;
         width: 100%;
+        opacity: .9;
+        filter: grayscale(100%);
+
+        &.is-selected {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
     }
+
+    // & > .is-selected:after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     box-shadow: inset 0 0 0 3px #fff;
+    // }
 
     @media (min-width: 768px) {
         display: flex;
