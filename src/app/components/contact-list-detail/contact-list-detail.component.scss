@@ -21,8 +21,6 @@
 
     &__profile-image > img {
         width: 150px;
-        border-radius: 50%;
-        margin-bottom: 16px;
     }
 
     @media (min-width: 1024px) {
@@ -37,7 +35,6 @@
 
         &__profile-image > img {
             width: 250px;
-            margin-bottom: 0;
         }
     }
 }
