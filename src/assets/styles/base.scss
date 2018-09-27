@@ -4,10 +4,10 @@ html, body {
 
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #222;
+    font-size: rem($font-size-default);
+    font-weight: $font-normal;
+    line-height: $line-height-default;
+    color: $black;
 }
 
 * {
@@ -15,21 +15,21 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    margin: 0 0 16px;
-    font-weight: 500;
+    margin: rem(0 0 16);
+    font-weight: $font-medium;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: $font-bold;
+    font-size: rem(36);
 }
 
 h2 {
-    font-size: 24px;
+    font-size: rem(24);
 }
 
 a {
-    color: #0c78af;
+    color: $blue-1;
 }
 
 ul {
@@ -39,12 +39,12 @@ ul {
 }
 
 p {
-    margin-top: 20px;
+    margin-top: rem(20);
 }
 
 hr {
-    border-top: 1px solid #eee;
-    margin: 24px 0;
+    border-top: 1px solid $gray-5;
+    margin: rem(24 0);
 }
 
 button {
@@ -52,5 +52,5 @@ button {
 }
 
 small {
-    font-size: 11px;
+    font-size: rem(11);
 }
