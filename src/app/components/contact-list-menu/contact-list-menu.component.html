@@ -1,6 +1,6 @@
 <app-search></app-search>
 
-<ul class="contact-list-menu" [class.is-open]="isOpen">
+<ul class="contact-list-menu" [class.contact-list-menu--is-open]="isOpen">
   <li id="menu-item-{{contact.id}}" *ngFor="let contact of contacts; let i = index">
     <button class="btn btn--transparent btn--collapsed btn--block" (click)="setAsSelected(contact.id)">
       <img 
