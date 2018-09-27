@@ -1,3 +1,9 @@
+// Text sizes
+
+.txt-12 {
+    font-size: 12px;
+}
+
 .txt-14 {
     font-size: 14px;
 }
@@ -10,6 +16,36 @@
     font-size: 24px;
 }
 
+.txt-28 {
+    font-size: 28px;
+}
+
+.txt-32 {
+    font-size: 32px;
+}
+
+.txt-36 {
+    font-size: 36px;
+}
+
+.txt-40 {
+    font-size: 40px;
+}
+
+.txt-44 {
+    font-size: 44px;
+}
+
+.txt-48 {
+    font-size: 48px;
+}
+
+// Text weights
+
+.txt-normal {
+    font-weight: 300;
+}
+
 .txt-medium {
     font-weight: 500;
 }
@@ -18,9 +54,13 @@
     font-weight: 800;
 }
 
+// Text styles
+
 .txt-no-decoration {
     text-decoration: none;
 }
+
+// Text alignment
 
 .txt-left {
     text-align: left;
@@ -29,6 +69,8 @@
 .txt-center {
     text-align: center;
 }
+
+// Text colors
 
 .txt-white {
     color: #fff;
