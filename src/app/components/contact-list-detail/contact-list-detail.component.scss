@@ -18,6 +18,10 @@
     &__sub-title {
         line-height: 1.2;
     }
+  
+    &__profile-image {
+      margin-bottom: 16px;
+    }
 
     &__profile-image > img {
         width: 150px;
@@ -27,14 +31,18 @@
         flex: 1;
         display: flex;
         text-align: left;
-
-        &__profile-content {
-            flex: 1;
-            margin-left: 32px;
+      
+        &__profile-image {
+            margin-bottom: 0;
         }
 
         &__profile-image > img {
             width: 250px;
+        }
+
+        &__profile-content {
+            flex: 1;
+            margin-left: 32px;
         }
     }
 }
