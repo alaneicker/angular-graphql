@@ -2,7 +2,7 @@
 
 <ul class="contact-list-menu" [class.is-open]="isOpen">
   <li id="menu-item-{{contact.id}}" *ngFor="let contact of contacts; let i = index">
-    <button (click)="setAsSelected(contact.id)">
+    <button class="btn btn--transparent btn--collapsed btn--block" (click)="setAsSelected(contact.id)">
       <img 
         [class.is-selected]="selectedContactId == contact.id"
         [src]="contact.img_url" 
