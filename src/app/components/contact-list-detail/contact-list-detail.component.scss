@@ -6,19 +6,16 @@
         font-size: 32px;
         font-weight: 600;
         margin: 0;
+        line-height: 1.2;
     }
 
     &__sub-title {
         margin-bottom: 16px;
         font-weight: 400;
         font-size: 24px;
-    }
-  
-    &__title,
-    &__sub-title {
         line-height: 1.2;
     }
-  
+
     &__profile-image {
       margin-bottom: 16px;
     }
