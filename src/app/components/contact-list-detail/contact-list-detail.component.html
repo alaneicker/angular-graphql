@@ -57,12 +57,14 @@
     [classes]="'modal--sm'"
     (close)="closeDeleteModal()">
     <ng-container modal-header>
-      Delete 
-      {{ selectedContact?.name.first }}
-      <ng-container *ngIf="selectedContact?.name.mi != ''">
-        {{ selectedContact?.name.mi }}
-      </ng-container>
-      {{ selectedContact?.name.last }}?
+      <span class="txt-medium txt-24">
+        Delete 
+        {{ selectedContact?.name.first }}
+        <ng-container *ngIf="selectedContact?.name.mi != ''">
+          {{ selectedContact?.name.mi }}
+        </ng-container>
+        {{ selectedContact?.name.last }}?
+      </span>
     </ng-container>
     <ng-container modal-body>
       <div class="padding-32">
