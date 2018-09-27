@@ -11,6 +11,20 @@
     &:hover {
         background: darken(#0c78af, 7%);
     }
+  
+    &--block {
+        display: block;
+    }
+  
+    &--transparent,
+    &--transparent:hover {
+        background: transparent;
+        outline: 0;
+    }
+      
+    &--collapsed {
+        padding: 0;
+    }
 
     &--sm {
         padding: 12px 18px;
