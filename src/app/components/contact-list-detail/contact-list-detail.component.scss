@@ -19,7 +19,7 @@
         line-height: 1.2;
     }
 
-    &__profile-image > * {
+    &__profile-image > img {
         width: 150px;
         border-radius: 50%;
         margin-bottom: 16px;
@@ -35,7 +35,7 @@
             margin-left: 32px;
         }
 
-        &__profile-image > * {
+        &__profile-image > img {
             width: 250px;
             margin-bottom: 0;
         }
