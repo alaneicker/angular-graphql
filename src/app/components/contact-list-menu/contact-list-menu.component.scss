@@ -16,7 +16,7 @@
     overflow: auto;
     transition: all .5s ease;
 
-    &.is-open {
+    &--is-open {
         display: flex;
         max-height: calc(100vh - 60px);
     }
