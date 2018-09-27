@@ -1,43 +1,43 @@
 // Text sizes
 
 .txt-12 {
-    font-size: 12px;
+    font-size: rem(12);
 }
 
 .txt-14 {
-    font-size: 14px;
+    font-size: rem(14);
 }
 
 .txt-16 {
-    font-size: 16px;
+    font-size: rem(16);
 }
 
 .txt-24 {
-    font-size: 24px;
+    font-size: rem(24);
 }
 
 .txt-28 {
-    font-size: 28px;
+    font-size: rem(28);
 }
 
 .txt-32 {
-    font-size: 32px;
+    font-size: rem(32);
 }
 
 .txt-36 {
-    font-size: 36px;
+    font-size: rem(36);
 }
 
 .txt-40 {
-    font-size: 40px;
+    font-size: rem(40);
 }
 
 .txt-44 {
-    font-size: 44px;
+    font-size: rem(44);
 }
 
 .txt-48 {
-    font-size: 48px;
+    font-size: rem(48);
 }
 
 // Text weights
@@ -66,12 +66,28 @@
     text-align: left;
 }
 
+.txt-right {
+    text-align: left;
+}
+
 .txt-center {
-    text-align: center;
+    text-align: right;
 }
 
 // Text colors
 
 .txt-white {
-    color: #fff;
+    color: $white;
+}
+
+.txt-red {
+    color: $red;
+}
+
+.txt-green {
+    color: $green-1;
+}
+
+.txt-blue {
+    color: $blue-1;
 }

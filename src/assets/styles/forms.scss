@@ -1,63 +1,63 @@
 ::placeholder {
-    color: #999;
+    color: $gray-3;
     opacity: 1;
 }
 
 :-ms-input-placeholder {
-    color: #999;
+    color: $gray-3;
 }
 
 ::-ms-input-placeholder {
-    color: #999;
+    color: $gray-3;
 }
 
 input[type="text"],
 input[type="number"],
 input[type="email"],
 textarea {
-    border: 1px solid #bbb;
+    border: 1px solid $gray-4;
     font-family: inherit;
     font-size: inherit;
-    padding: 8px;
+    padding: rem(8);
     width: 100%;
 }
 
 textarea {
-    min-height: 150px;
+    min-height: rem(150);
     resize: none;
 }
 
 label {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: rem(14);
+    font-weight: $font-medium;
 }
 
 .input {
-    margin-bottom: 8px;
+    margin-bottom: rem(8);
 
     small {
         display: none;
     }
 
     &--sm {
-        flex: 0 75px;
+        flex: rem(0 75);
     }
 
     &--md {
-        flex: 0 150px;
+        flex: rem(0 150);
     }
 
     &--has-error > label {
-        color: #ef300e;
+        color: $red;
     }
 
     &--has-error > input,
     &--has-error > textarea {
-        border-color: #ef300e;
+        border-color: $red;
     }
 
     &--has-error > small {
-        color: #ef300e;
+        color: $red;
         display: block;
     }
 }

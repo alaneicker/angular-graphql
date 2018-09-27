@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: $font-poppins;
     font-size: rem($font-size-default);
     font-weight: $font-normal;
     line-height: $line-height-default;
@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: rem(0 0 16);
     font-weight: $font-medium;
 }

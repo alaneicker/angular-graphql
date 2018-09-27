@@ -12,11 +12,11 @@
     }
   
     &--hr > * + * {
-        margin-left: 16px;
+        margin-left: rem(16);
     }
   
     &--hr-2 > * + * {
-        margin-left: 32px;
+        margin-left: rem(32);
     }
 
     &--hr-3 > * + * {
@@ -24,7 +24,7 @@
     }
   
     &--hr--reverse > * {
-        margin-right: 16px;
+        margin-right: rem(16);
     }
   
     &--small,
