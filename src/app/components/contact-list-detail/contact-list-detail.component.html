@@ -5,14 +5,14 @@
         [alt]="selectedContact?.name.first + ' ' + selectedContact?.name.last">
     </div>
     <div class="contact-list-detail__profile-content">
-      <h1>
+      <h1 class="contact-list-detail__title">
         {{ selectedContact?.name.first }}
         <ng-container *ngIf="selectedContact?.name.mi != ''">
           {{ selectedContact?.name.mi }}
         </ng-container>
         {{ selectedContact?.name.last }}
       </h1>
-      <h2>{{ selectedContact?.job_title }}</h2>
+      <h2 class="contact-list-detail__sub-title">{{ selectedContact?.job_title }}</h2>
       
       <div>
         {{ selectedContact?.address.addr1 }}
