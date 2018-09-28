@@ -34,5 +34,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server Running in ${env} mode at localhost:${port}/graphql`)
+    console.log(`Server Running in ${env} mode at /graphql`)
 });
