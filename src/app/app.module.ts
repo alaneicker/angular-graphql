@@ -17,6 +17,9 @@ import { ContactListMenuComponent } from './components/contact-list-menu/contact
 import { ContactListDetailComponent } from './components/contact-list-detail/contact-list-detail.component';
 import { SearchComponent } from './components/search/search.component';
 
+const graphQlURI = location.port !== '4000'
+  ? 'https://graphql-contact-list.herokuapp.com'
+  : 'http://localhost:4000';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,7 @@ export class AppModule {
     httpLink: HttpLink,
   ) {
     apollo.create({
-      link: httpLink.create({ uri: 'http://localhost:4000/graphql'}),
+      link: httpLink.create({ uri: `${graphQlURI}/graphql`}),
       cache: new InMemoryCache(),
     });
   }
