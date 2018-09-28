@@ -12,4 +12,23 @@
     'h-list',
     'padding',
     'txt',
+    'visibility',
+    'v-list',
     'vr';
+
+@media(min-width: $breakpoint-small) {
+    @import 
+        'flexbox-small',
+        'visibility-small';
+}
+
+@media(min-width: $breakpoint-medium) {
+    @import 
+        'flexbox-medium',
+        'visibility-medium';
+}
+
+@media(min-width: $breakpoint-large) {
+    @import 
+        'flexbox-large';
+}
