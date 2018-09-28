@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-search',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
   searchStr: string;
 
-  constructor() { }
+  constructor(
+    private searchService: SearchService,
+  ) { }
 
   ngOnInit() {
   }
@@ -16,7 +19,11 @@ export class SearchComponent implements OnInit {
   submit() {
     const values = this.searchStr.split(' ');
 
-    // TODO: send values to search service to handle request
+    this.searchService.query(`
+      first_name: "${values[0]}",
+      last_name: "${values[2]}",
+      mi: "${values[1]}"
+    `);
   }
 
 }

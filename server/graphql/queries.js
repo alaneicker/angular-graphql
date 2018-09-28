@@ -24,7 +24,11 @@ const queries = () => {
     
     // Gets a single contact by `first_name` and `last_name`
     const getContactByName = args => {
-        
+        return Contacts.findOne({ name: {
+            first: args.first_name,
+            last: args.last_name,
+            mi: args.mi
+        } });
     };
 
     // Creates a contact

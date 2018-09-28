@@ -1,7 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/takeUntil';
 
 import { IContact } from '../../interfaces/contact.interface';
 import { QueryService } from '../../services/query.service';
+import { SearchService } from '../../services/search.service';
 
 import {
   contactFragment,
@@ -10,12 +13,14 @@ import {
 } from '../../gql-query-fragments/contacts';
 
 @Component({
-  providers: [QueryService],
+  providers: [QueryService, SearchService],
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.scss']
 })
-export class ContactListComponent implements OnInit {
+export class ContactListComponent implements OnInit, OnDestroy {
+  private unsubscribe$: Subject<void> = new Subject();
+
   allContacts: IContact[];
   selectedContact: IContact;
   selectedContactId: number;
@@ -28,12 +33,39 @@ export class ContactListComponent implements OnInit {
   @Input() title: string;
 
   constructor(
-    private queryService: QueryService
+    private queryService: QueryService,
+    private searchService: SearchService,
   ) { }
 
   ngOnInit() {
     this.getFirstContact();
     this.getAllContactImgUrls();
+
+    this.searchService.watch
+      .takeUntil(this.unsubscribe$)
+      .subscribe(res => {
+        if (res.query) {
+          this.queryService.query(`
+            query {
+              contactByName(${res.query}) {
+                ${contactFragment}
+              }
+            }
+          `).then(data => {
+              const contact = data.data.contactByName;
+              this.selectedContact = contact;
+              this.selectedContactId = contact.id;
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }
+      });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   closeAddContactModal() {

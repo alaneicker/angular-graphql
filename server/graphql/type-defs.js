@@ -4,7 +4,8 @@ module.exports = `
         allContacts: [Contact]
         contactByName(
             first_name: String!,
-            last_name: String!
+            last_name: String!,
+            mi: String!
         ): Contact
         getFirstContact: [Contact]
     },
