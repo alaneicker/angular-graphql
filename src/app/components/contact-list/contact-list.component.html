@@ -54,15 +54,3 @@
         </div>
     </ng-container>
 </app-modal>
-
-<!-- 
-  TODO: Make toaster service so that this can be made global.
-  Toaster service will have an observable to check for new
-  toasts and update toast array.
--->
-<app-toaster>
-    <app-toast 
-      [show]="showToast">
-      <span [innerHTML]="confirmationString"></span>
-    </app-toast>
-</app-toaster>
