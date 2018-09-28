@@ -1,8 +1,10 @@
+@import '../../../../src/assets/styles/sass-utilities/tools';
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #333;
-    padding: 0 24px;
-    height: 60px;
+    background: $gray-0;
+    padding: rem(0 24);
+    height: rem(60);
 }
