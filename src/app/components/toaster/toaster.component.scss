@@ -1,10 +1,12 @@
+@import '../../../../src/assets/styles/sass-utilities/tools';
+
 .toaster {
     position: fixed;
-    left: 20px;
-    top: 20px;
-    right: 20px;
+    left: rem(20);
+    top: rem(20);
+    right: rem(20);
 
-    @media (min-width: 412px) {
+    @media (min-width: $breakpoint-small) {
         left: auto;
     }
 }

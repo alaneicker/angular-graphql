@@ -1,26 +1,29 @@
+@import '../../../../src/assets/styles/sass-utilities/tools';
+
+
 .toast {
-    background-color: #0c78af;
-    color: #fff;
+    background-color: $blue-1;
+    color: $white;
     display: flex;
     align-items: center;
-    padding: 16px;
-    font-size: 16px;
+    padding: rem(16);
+    font-size: rem(14);
 
     & > :first-child {
         flex: 1;
     }
 
     & > * + * {
-        margin-left: 16px;
+        margin-left: rem(16);
     }
 
     &__close-btn {
         border: 0;
         background: 0;
-        color: #fff;
+        color: $white;
         cursor: pointer;
-        font-size: 36px;
-        font-weight: 500;
+        font-size: rem(36);
+        font-weight: $font-medium;
         outline: 0;
         transform: rotate(45deg);
     }

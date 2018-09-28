@@ -1,3 +1,5 @@
+@import '../../../../src/assets/styles/sass-utilities/tools';
+
 .modal {
     display: flex;
     position: fixed;
@@ -13,26 +15,15 @@
         background: #fff;
         flex-direction: column;
         display: flex;
-        margin: 16px;
+        margin: rem(16);
     }
 
     &__head {
-        background: #f5f5f5;
+        background: $gray-6;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 24px 32px;
-    }
-
-    &__close-btn {
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 1;
-        transform: rotate(45deg);
-        background: transparent;
-        border: 0;
-        color: #555;
-        outline: 0;
+        padding: rem(24 32);
     }
 
     &__body {
@@ -40,10 +31,10 @@
     }
 
     &__footer {
-        border-top: 1px solid #ccc;
+        border-top: rem(1) solid $gray-4;
     }
 
-    @media(min-width: 768px) {
+    @media(min-width: $breakpoint-medium) {
         justify-content: center;
         align-items: center;
 

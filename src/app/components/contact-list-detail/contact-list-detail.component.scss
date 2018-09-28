@@ -1,27 +1,29 @@
+@import '../../../../src/assets/styles/sass-utilities/tools';
+
 .contact-list-detail {
-    padding: 32px;
+    padding: rem(32);
     text-align: center;
 
     &__title {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: rem(32);
+        font-weight: $font-semibold;
         margin: 0;
         line-height: 1.2;
     }
 
     &__sub-title {
-        margin-bottom: 16px;
-        font-weight: 400;
-        font-size: 24px;
+        margin-bottom: rem(16);
+        font-weight: $font-normal;
+        font-size: rem(24);
         line-height: 1.2;
     }
 
     &__profile-image {
-      margin-bottom: 16px;
+      margin-bottom: rem(16);
     }
 
     &__profile-image > img {
-        width: 150px;
+        width: rem(150);
     }
 
     @media (min-width: 1024px) {
@@ -34,12 +36,12 @@
         }
 
         &__profile-image > img {
-            width: 250px;
+            width: rem(250);
         }
 
         &__profile-content {
             flex: 1;
-            margin-left: 32px;
+            margin-left: rem(32);
         }
     }
 }

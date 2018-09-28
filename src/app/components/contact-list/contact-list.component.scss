@@ -1,9 +1,11 @@
+@import '../../../../src/assets/styles/sass-utilities/tools';
+
 .contact-list {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-medium) {
         flex-direction: row;
         flex: 1;
     }
