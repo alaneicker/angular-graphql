@@ -3,17 +3,17 @@
   <!-- Header -->
   <app-header>
     <ng-container header-left>
-      <span class="txt-24 txt-medium txt-white">{{ title }}</span>
+      <span class="txt-16 txt-24@medium txt-medium txt-white">{{ title }}</span>
     </ng-container>
     <ng-container header-right>
         <ul class="h-list">
           <li>
-            <a class="txt-14 txt-medium txt-no-decoration txt-white" 
+            <a class="txt-12 txt-14@medium txt-medium txt-no-decoration txt-white" 
                href="javascript:void(0)" 
                (click)="openAddContactModal()">Add Contact</a>
           </li>
           <li>
-              <a class="txt-14 txt-medium txt-no-decoration txt-white"
+              <a class="txt-12 txt-14@medium txt-medium txt-no-decoration txt-white"
                  href="javascript:void(0)"
                  (click)="toggleMenu()">Menu</a>
           </li>
@@ -43,7 +43,7 @@
   *ngIf="showAddContactModal"
   (close)="closeAddContactModal($event)">
     <ng-container modal-header>
-      <span class="txt-medium txt-24">{{ itemToUpdate ? 'Update' : 'Add New' }} Contact</span>
+      <span class="txt-medium txt-16 txt-24@medium">{{ itemToUpdate ? 'Update' : 'Add New' }} Contact</span>
     </ng-container>
     <ng-container modal-body>
         <div class="padding-32">
