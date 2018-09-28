@@ -12,7 +12,6 @@
     "e2e": "ng e2e",
     "dev": "concurrently --kill-others \"npm run start:dev\" \"ng serve --open\""
   },
-  "proxy": "http://localhost:4000",
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
