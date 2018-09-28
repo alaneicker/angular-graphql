@@ -1,0 +1,12 @@
+@function rem($values) {
+    $rems: ();
+    @each $value in $values {
+        @if $value==0 or $value==auto {
+            $rems: append($rems, $value);
+        }
+        @else {
+            $rems: append( $rems, ($value / $root-font-size) + rem);
+        }
+    }
+    @return $rems;
+}

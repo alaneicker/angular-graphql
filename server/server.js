@@ -1,6 +1,7 @@
+const express = require('express');
+const app = express();
 const port = process.env.PORT || 4000;
 const env = process.env.NODE_ENV || 'development';
-const app = require('express')();
 const express_graphql = require('express-graphql');
 const { buildSchema } = require('graphql');
 const schema = buildSchema(require('./graphql/type-defs'));
@@ -25,6 +26,12 @@ app.use('/graphql', express_graphql({
     rootValue: resolvers,
     graphiql: env === 'development' ? true : false,
 }));
+
+app.use(express.static(`${__dirname}/dist`));
+
+app.get('/', (req, res) => {
+    res.sendFile('dist/index.html', { root: __dirname });
+});
 
 app.listen(port, () => {
     console.log(`Server Running in ${env} mode at localhost:${port}/graphql`)

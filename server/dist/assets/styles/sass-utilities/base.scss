@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-poppins;
+    font-size: rem($font-size-default);
+    font-weight: $font-normal;
+    line-height: $line-height-default;
+    color: $black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: rem(0 0 16);
+    font-weight: $font-medium;
+}
+
+h1 {
+    font-weight: $font-bold;
+    font-size: rem(36);
+}
+
+h2 {
+    font-size: rem(24);
+}
+
+a {
+    color: $blue-1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: rem(20);
+}
+
+hr {
+    border-top: 1px solid $gray-5;
+    margin: rem(24 0);
+}
+
+button {
+    cursor: pointer;
+}
+
+small {
+    font-size: rem(11);
+}

@@ -1,0 +1,63 @@
+::placeholder {
+    color: $gray-3;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $gray-3;
+}
+
+::-ms-input-placeholder {
+    color: $gray-3;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+    border: 1px solid $gray-4;
+    font-family: inherit;
+    font-size: inherit;
+    padding: rem(8);
+    width: 100%;
+}
+
+textarea {
+    min-height: rem(150);
+    resize: none;
+}
+
+label {
+    font-size: rem(14);
+    font-weight: $font-medium;
+}
+
+.input {
+    margin-bottom: rem(8);
+
+    small {
+        display: none;
+    }
+
+    &--sm {
+        flex: rem(0 75);
+    }
+
+    &--md {
+        flex: rem(0 150);
+    }
+
+    &--has-error > label {
+        color: $red;
+    }
+
+    &--has-error > input,
+    &--has-error > textarea {
+        border-color: $red;
+    }
+
+    &--has-error > small {
+        color: $red;
+        display: block;
+    }
+}

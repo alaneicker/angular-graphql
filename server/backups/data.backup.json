@@ -1,6 +1,4 @@
-/* 1 */
 {
-    "_id" : ObjectId("5ba2c4696aa1b1409291f178"),
     "id" : 1,
     "job_title" : "UI Engineer",
     "email" : "stewart_thomson@gmail.com",
@@ -21,10 +19,7 @@
     "bio" : "Award-winning creator. Friendly internet fanatic. Hardcore communicator. Alcohol expert. Food guru.",
     "img_url" : "https://scontent-ort2-1.cdninstagram.com/vp/9672c9dea32d48b5080ba5a5189f836c/5C2B6AA0/t51.2885-15/e35/10388046_1610330982542097_1420566945_n.jpg"
 }
-
-/* 2 */
 {
-    "_id" : ObjectId("5ba2c4926aa1b1409291f17b"),
     "id" : 2,
     "job_title" : "Pencil Pusher",
     "email" : "bbarker@gmail.com",
@@ -45,10 +40,7 @@
     "bio" : "Amateur social media fanatic. Typical travel advocate. Internet fan. Proud web lover. Passionate food nerd. Friendly gamer. Wannabe zombie practitioner.",
     "img_url" : "http://www.microsoft.com/en-us/research/uploads/prod/2018/05/LoganAdams_05-02-2018-2-360-x-360.jpg"
 }
-
-/* 3 */
 {
-    "_id" : ObjectId("5ba2c4c06aa1b1409291f188"),
     "id" : 3,
     "job_title" : "Zombie Enthusiast",
     "email" : "james.mccormick@homail.com",
@@ -69,10 +61,7 @@
     "bio" : "Professional zombie enthusiast. Hipster-friendly writer. Infuriatingly humble communicator. Freelance beer nerd. Evil web fanatic. Creator.",
     "img_url" : "https://i2.wp.com/www.ucphoto.me/wp-content/uploads/2018/05/headshot-512.jpg?resize=512%2C512&ssl=1"
 }
-
-/* 4 */
 {
-    "_id" : ObjectId("5ba2c4cf6aa1b1409291f18a"),
     "id" : 4,
     "email" : "g_moyer@yahoo.com",
     "job_title" : "Starbucks Barista",
@@ -93,10 +82,7 @@
     "bio" : "Wannabe entrepreneur. Zombie geek. Freelance alcohol fanatic. Twitter fanatic. Typical bacon fan.",
     "img_url" : "https://i.cricketcb.com/stats/img/faceImages/8364.jpg"
 }
-
-/* 5 */
 {
-    "_id" : ObjectId("5ba2c4de6aa1b1409291f190"),
     "id" : 5,
     "email" : "m.dillon@yahoo.com",
     "job_title" : "Web Designer",
@@ -117,10 +103,7 @@
     "bio" : "Infuriatingly humble creator. Travel maven. Food trailblazer. Unapologetic thinker. Extreme music ninja. Tv specialist.",
     "img_url" : "https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-gabriela-mills-college.jpg"
 }
-
-/* 6 */
 {
-    "_id" : ObjectId("5ba57a0ab3cda8c7644055e7"),
     "name" : {
         "first" : "Fred",
         "last" : "Flintstone",
@@ -142,10 +125,7 @@
     "img_url" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTKV_6DBw6w9r3BDGrT3luUm88FK0uYgRXcIqtp4zLxbhemt8k",
     "__v" : 0
 }
-
-/* 7 */
 {
-    "_id" : ObjectId("5ba5c7f1b3cda8c7644055ec"),
     "name" : {
         "first" : "Andy",
         "last" : "Liu",
@@ -167,10 +147,7 @@
     "img_url" : "https://pbs.twimg.com/profile_images/948541222632620033/X178xlTd_400x400.jpg",
     "__v" : 0
 }
-
-/* 8 */
 {
-    "_id" : ObjectId("5ba5cda3fef21fd1f55edc90"),
     "name" : {
         "first" : "Sally",
         "last" : "Smith",
@@ -192,10 +169,7 @@
     "img_url" : "https://www.iti.org.uk/images/article-images/Profile-Interview-Photo---Fiona-Gray.jpg",
     "__v" : 0
 }
-
-/* 9 */
 {
-    "_id" : ObjectId("5ba79d9c55a206f182ed373a"),
     "name" : {
         "first" : "Bill",
         "last" : "Mayall",
@@ -217,10 +191,7 @@
     "img_url" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtTG0j1MmEng29JZuTbH7KqM55WOrUD7XfxtzOseyZeuFWJPv7",
     "__v" : 0
 }
-
-/* 10 */
 {
-    "_id" : ObjectId("5ba83b5f313e71f7116bb695"),
     "name" : {
         "first" : "Anonymous",
         "last" : "Person",
@@ -242,10 +213,7 @@
     "img_url" : "http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-picture-3.jpg",
     "__v" : 0
 }
-
-/* 11 */
 {
-    "_id" : ObjectId("5ba83be8313e71f7116bb696"),
     "name" : {
         "first" : "Patrick",
         "last" : "Schmidt",
@@ -267,10 +235,7 @@
     "img_url" : "http://img2.thejournal.ie/inline/2470754/original?width=428&version=2470754",
     "__v" : 0
 }
-
-/* 12 */
 {
-    "_id" : ObjectId("5ba83c94313e71f7116bb697"),
     "name" : {
         "first" : "Kenny",
         "last" : "Wong",
@@ -292,10 +257,7 @@
     "img_url" : "https://www.citrix.com/blogs/wp-content/uploads/2017/11/Citrix-Blog-User-Bio-Photo-6.png",
     "__v" : 0
 }
-
-/* 13 */
 {
-    "_id" : ObjectId("5ba9360385562502ed9255f8"),
     "name" : {
         "first" : "Barbara",
         "last" : "Jones",
@@ -317,10 +279,7 @@
     "img_url" : "https://cbsnews2.cbsistatic.com/hub/i/r/2016/01/29/8898800d-2620-4dd8-8355-84683621506b/thumbnail/360x360/23d08f3d5c3d0ad95625777da7966ce5/sandbergsherylabosch1200-wm.jpg",
     "__v" : 0
 }
-
-/* 14 */
 {
-    "_id" : ObjectId("5ba9369485562502ed9255f9"),
     "name" : {
         "first" : "Dwayne",
         "last" : "Johnson",
@@ -342,10 +301,7 @@
     "img_url" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMmd8ThLIJunzlX1ZLnhrrUDMSsR4jhtdcbs6Ehf0SVwdJQkf",
     "__v" : 0
 }
-
-/* 15 */
 {
-    "_id" : ObjectId("5ba936f085562502ed9255fa"),
     "name" : {
         "first" : "Mary",
         "last" : "Sanchez",
@@ -367,10 +323,7 @@
     "img_url" : "http://acetattooz.com/wp-content/uploads/2016/02/Archana-Nakhua-Bhanushali.jpg?x15164",
     "__v" : 0
 }
-
-/* 16 */
 {
-    "_id" : ObjectId("5ba9376385562502ed9255fb"),
     "name" : {
         "first" : "Paul",
         "last" : "Monson",
@@ -392,10 +345,7 @@
     "img_url" : "http://www.prmc.org/assets/site/images/physicians/gordon.png",
     "__v" : 0
 }
-
-/* 17 */
 {
-    "_id" : ObjectId("5ba937e685562502ed9255fc"),
     "name" : {
         "first" : "Patrick",
         "last" : "Ulie",
@@ -417,10 +367,7 @@
     "img_url" : "https://us.hellomagazine.com/images/stories/1/2018/02/20/000/483/899/gallery_1_1.jpg",
     "__v" : 0
 }
-
-/* 18 */
 {
-    "_id" : ObjectId("5ba939f285562502ed9255fd"),
     "name" : {
         "first" : "Chris",
         "last" : "Thompson",
@@ -442,10 +389,7 @@
     "img_url" : "https://pbs.twimg.com/profile_images/971559942091141120/NjeEp59a_400x400.jpg",
     "__v" : 0
 }
-
-/* 19 */
 {
-    "_id" : ObjectId("5ba93a7285562502ed9255fe"),
     "name" : {
         "first" : "Tabitha",
         "last" : "McDonald",
@@ -467,10 +411,7 @@
     "img_url" : "http://www.bravotv.com/sites/nbcubravotv/files/field_person_cover_photo/2018/04/tabatha-coffey-images-800x800.png",
     "__v" : 0
 }
-
-/* 20 */
 {
-    "_id" : ObjectId("5ba93ae785562502ed9255ff"),
     "name" : {
         "first" : "Jerry",
         "last" : "McDermot",
@@ -492,10 +433,7 @@
     "img_url" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3_4uVxippb-zrfJyjx4n_Lj9YKNJZkt4p_vfUoseW3CTMaOBTOA",
     "__v" : 0
 }
-
-/* 21 */
 {
-    "_id" : ObjectId("5ba93ba885562502ed925600"),
     "name" : {
         "first" : "Steven",
         "last" : "Smith",

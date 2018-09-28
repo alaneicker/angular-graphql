@@ -1,0 +1,87 @@
+.btn {
+    background: $blue-1;
+    border: 0;
+    color: $white;
+    font-size: inherit;
+    text-transform: uppercase;
+    padding: rem(16 24);
+    border-radius: rem(3);
+    transition: background .2s linear;
+
+    &:hover {
+        background: darken($blue-1, 7%);
+    }
+  
+    &--block {
+        display: block;
+    }
+
+    &--close {
+        font-size: rem(48);
+        font-weight: $font-semibold;
+        line-height: 1;
+        transform: rotate(45deg);
+        background: transparent;
+        border: 0;
+        color: $gray-2;
+        outline: 0;
+        padding: 0;
+        transition: color .3s linear;
+
+        &:hover {
+            background: transparent;
+            color: $gray-1;
+        }
+    }
+  
+    &--transparent,
+    &--transparent:hover {
+        background: transparent;
+        outline: 0;
+    }
+
+    &--gray {
+        background-color: $gray-2;
+
+        &:hover {
+            background-color: $gray-1;
+        }
+    }
+
+    &--green {
+        background-color: $green-1;
+        
+        &:hover {
+            background-color: $green-1;
+        }
+    }
+
+    &--hollow {
+        background-color: transparent;
+        color: $blue-1;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+      
+    &--collapsed {
+        padding: 0;
+    }
+
+    &--sm {
+        padding: rem(12 18);
+    }
+
+    &--lg {
+        padding: rem(20 28);
+    }
+
+    &--secondary {
+        background: $red;
+
+        &:hover {
+            background: darken($red, 7%);
+        }
+    }
+}

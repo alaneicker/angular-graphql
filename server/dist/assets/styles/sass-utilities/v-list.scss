@@ -1,0 +1,10 @@
+.v-list {
+
+    & > * + * {
+        margin-top: rem(16);
+    }
+
+    &--tight & > * + * {
+        margin-top: rem(8);
+    }
+}
