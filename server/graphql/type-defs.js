@@ -5,7 +5,7 @@ module.exports = `
         contactByName(
             first_name: String!,
             last_name: String!,
-            mi: String!
+            mi: String
         ): Contact
         getFirstContact: [Contact]
     },

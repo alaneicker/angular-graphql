@@ -22,13 +22,18 @@ const queries = () => {
         return Contacts.findOne({ id: args.id });
     };
     
-    // Gets a single contact by `first_name` and `last_name`
+    // Gets a single contact by `first_name` and `last_name` and `mi`
     const getContactByName = args => {
-        return Contacts.findOne({ name: {
-            first: args.first_name,
-            last: args.last_name,
-            mi: args.mi
-        } });
+        let query = {
+            'name.first': { $regex: new RegExp(args.first_name, 'i') },
+            'name.last': { $regex: new RegExp(args.last_name, 'i') },
+        };
+
+        if (args.mi !== null) {
+            query['name.mi'] = { $regex: new RegExp(args.mi, 'i') };
+        }
+
+        return Contacts.findOne(query);
     };
 
     // Creates a contact
