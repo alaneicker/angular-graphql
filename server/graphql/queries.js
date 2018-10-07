@@ -23,7 +23,7 @@ const queries = () => {
     };
     
     // Gets a single contact by `first_name` and `last_name` and `mi`
-    const getContactByName = args => {
+    const contactByName = args => {
         let query = {
             'name.first': { $regex: new RegExp(args.first_name, 'i') },
             'name.last': { $regex: new RegExp(args.last_name, 'i') },
@@ -48,7 +48,6 @@ const queries = () => {
 
     // Updates a contact
     const updateContact = contact => {
-        //return contact;
         return Contacts.update({ id: contact.id }, contact, { upsert: true });
     };
 
@@ -56,7 +55,7 @@ const queries = () => {
         firstContact: firstContact,
         allContacts: allContacts,
         contact: contact,
-        contactByName: getContactByName,
+        contactByName: contactByName,
         createContact: createContact,
         deleteContact: deleteContact,
         updateContact: updateContact,
