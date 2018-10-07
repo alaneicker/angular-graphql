@@ -40,10 +40,10 @@ export class ContactListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.getFirstContact();
     this.getAllContactImgUrls();
-    this.searchWatcher();
+    this.searchObserver();
   }
 
-  searchWatcher() {
+  searchObserver() {
     this.searchService.watch
       .takeUntil(this.unsubscribe$)
       .subscribe(res => {
@@ -93,13 +93,13 @@ export class ContactListComponent implements OnInit, OnDestroy {
 
   getFirstContact() {
     this.queryService.query(`
-      query getFirstContact {
-        getFirstContact {
+      query firstContact {
+        firstContact {
           ${contactFragment}
         }
       }
     `).then(res => {
-        this.selectedContact = res.data.getFirstContact[0];
+        this.selectedContact = res.data.firstContact[0];
       })
       .catch(err => {
         console.log(err);

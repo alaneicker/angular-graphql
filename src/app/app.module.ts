@@ -17,7 +17,7 @@ import { ContactListMenuComponent } from './components/contact-list-menu/contact
 import { ContactListDetailComponent } from './components/contact-list-detail/contact-list-detail.component';
 import { SearchComponent } from './components/search/search.component';
 
-const graphQlURL = location.port !== '4000'
+const graphQlURL = location.port !== '4200'
   ? 'https://graphql-contact-list.herokuapp.com'
   : 'http://localhost:4000';
 

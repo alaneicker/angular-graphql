@@ -7,7 +7,7 @@ module.exports = `
             last_name: String!,
             mi: String
         ): Contact
-        getFirstContact: [Contact]
+        firstContact: [Contact]
     },
     type Mutation {
         createContact(

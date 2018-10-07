@@ -8,7 +8,7 @@ const queries = () => {
     'use strict';
 
     // Gets the most recent contact
-    const getFirstContact = () => {
+    const firstContact = () => {
         return Contacts.find().limit(1);
     };
 
@@ -53,7 +53,7 @@ const queries = () => {
     };
 
     return {
-        getFirstContact: getFirstContact,
+        firstContact: firstContact,
         allContacts: allContacts,
         contact: contact,
         contactByName: getContactByName,

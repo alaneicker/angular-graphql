@@ -10,7 +10,7 @@ const cors = require('cors')
 const q = queries();
 
 const resolvers = {
-    getFirstContact: q.getFirstContact,
+    firstContact: q.firstContact,
     allContacts: q.allContacts,
     contact: q.contact,
     contactByName: q.contactByName,
