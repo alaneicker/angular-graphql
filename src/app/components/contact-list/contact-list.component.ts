@@ -6,11 +6,7 @@ import { IContact } from '../../interfaces/contact.interface';
 import { QueryService } from '../../services/query.service';
 import { SearchService } from '../../services/search.service';
 
-import {
-  contactFragment,
-  contactsMenuFragment,
-  contactNameFragment,
-} from '../../gql-query-fragments/contacts';
+import { contactFragment, contactsMenuFragment } from '../../gql-query-fragments/contacts';
 
 @Component({
   providers: [QueryService, SearchService],
@@ -54,8 +50,8 @@ export class ContactListComponent implements OnInit, OnDestroy {
                 ${contactFragment}
               }
             }
-          `).then(resp => {
-              const contact = resp.data.contactByName;
+          `).then((resp) => {
+              const contact = <IContact>resp.data.contactByName;
 
               if (contact.id) {
                 this.selectedContact = contact;
@@ -98,8 +94,8 @@ export class ContactListComponent implements OnInit, OnDestroy {
           ${contactFragment}
         }
       }
-    `).then(res => {
-        this.selectedContact = res.data.firstContact[0];
+    `).then((res) => {
+        this.selectedContact = <IContact>res.data.firstContact[0];
       })
       .catch(err => {
         console.log(err);
@@ -114,7 +110,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
         }
       }
     `).then(res => {
-        this.allContacts = res.data.allContacts;
+        this.allContacts = <IContact[]>res.data.allContacts;
       })
       .catch(err => {
         console.log(err);
@@ -132,7 +128,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
         }
       }
     `).then(res => {
-        this.selectedContact = res.data.contact;
+        this.selectedContact = <IContact>res.data.contact;
       })
       .catch(err => {
         console.log(err);
@@ -187,7 +183,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
           }
         }
       `).then(res => {
-          this.allContacts.push(res.data.createContact);
+          this.allContacts.push(<IContact>res.data.createContact);
           this.getContact(form.id);
           this.showAddContactModal = false;
         })
