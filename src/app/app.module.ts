@@ -17,10 +17,6 @@ import { ContactListMenuComponent } from './components/contact-list-menu/contact
 import { ContactListDetailComponent } from './components/contact-list-detail/contact-list-detail.component';
 import { SearchComponent } from './components/search/search.component';
 
-const graphQlURL = location.port !== '4200'
-  ? 'https://graphql-contact-list.herokuapp.com'
-  : 'http://localhost:4000';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +46,12 @@ export class AppModule {
     apollo: Apollo,
     httpLink: HttpLink,
   ) {
+    const graphqlURL = location.port !== '4200'
+      ? 'https://graphql-contact-list.herokuapp.com'
+      : 'http://localhost:4000';
+
     apollo.create({
-      link: httpLink.create({ uri: `${graphQlURL}/graphql`}),
+      link: httpLink.create({ uri: `${graphqlURL}/graphql`}),
       cache: new InMemoryCache(),
     });
   }
