@@ -46,7 +46,7 @@
       <span class="txt-medium txt-16 txt-24@medium">{{ itemToUpdate ? 'Update' : 'Add New' }} Contact</span>
     </ng-container>
     <ng-container modal-body>
-        <div class="padding-32">
+        <div class="padding-16">
           <app-add-contact-form 
             [formData]="itemToUpdate"
             (onsubmit)="saveContact($event)">
