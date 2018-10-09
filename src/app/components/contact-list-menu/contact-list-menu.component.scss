@@ -31,11 +31,16 @@
         display: flex;
         align-items: center;
         width: 100%;
-        transition: background 0.3s linear;
+        transition: all 0.3s linear;
 
         &:hover,
         &.is-selected {
             background: $black;
+
+            & > img {
+                filter: grayscale(0%);
+                opacity: 1;
+            }
         }
     }
 
@@ -49,7 +54,6 @@
         font-size: rem(15);
         opacity: .9;
         filter: grayscale(100%);
-        transition: filter .5s linear;
         margin-right: rem(16);
     }
 
