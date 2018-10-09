@@ -4,6 +4,7 @@
   <li 
     id="menu-item-{{contact.id}}" 
     *ngFor="let contact of contacts; let i = index"
+    [class.is-selected]="selectedContactId == contact.id"
     (click)="setAsSelected(contact.id)">
     <img 
       [class.is-selected]="selectedContactId == contact.id"

@@ -33,7 +33,8 @@
         width: 100%;
         transition: background 0.3s linear;
 
-        &:hover {
+        &:hover,
+        &.is-selected {
             background: $black;
         }
     }
@@ -50,11 +51,6 @@
         filter: grayscale(100%);
         transition: filter .5s linear;
         margin-right: rem(16);
-
-        &.is-selected {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
     }
 
     @media (min-width: $breakpoint-medium) {
