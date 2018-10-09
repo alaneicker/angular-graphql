@@ -21,20 +21,35 @@
     &--is-open {
         display: flex;
         max-height: calc(100vh - 60px);
+        overflow: auto;
     }
 
     & > * {
-        flex: 0 33.333%;
-        max-width: 20%;
-        position: relative;
+        cursor: pointer;
+        color: $white;
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        transition: background 0.3s linear;
+
+        &:hover {
+            background: $black;
+        }
+    }
+
+    & > * + * {
+        border-top: rem(1) solid $gray-1;
     }
 
     & > * img {
         display: block;
-        width: 100%;
+        height: rem(52);
+        font-size: rem(15);
         opacity: .9;
         filter: grayscale(100%);
         transition: filter .5s linear;
+        margin-right: rem(16);
 
         &.is-selected {
             filter: grayscale(0%);
@@ -46,7 +61,7 @@
         display: flex;
         flex: 1;
         max-width: rem(300);
-        max-height: initial;
+        height: calc(100% - 50px);
 
         & > * {
             max-width: initial;

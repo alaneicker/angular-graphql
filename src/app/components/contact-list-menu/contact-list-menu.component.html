@@ -1,12 +1,14 @@
 <app-search></app-search>
 
 <ul class="contact-list-menu" [class.contact-list-menu--is-open]="isOpen">
-  <li id="menu-item-{{contact.id}}" *ngFor="let contact of contacts; let i = index">
-    <button class="btn btn--transparent btn--collapsed btn--block" (click)="setAsSelected(contact.id)">
-      <img 
-        [class.is-selected]="selectedContactId == contact.id"
-        [src]="contact.img_url" 
-        [alt]="contact.name.first + ' ' + contact.name.last">
-    </button>
+  <li 
+    id="menu-item-{{contact.id}}" 
+    *ngFor="let contact of contacts; let i = index"
+    (click)="setAsSelected(contact.id)">
+    <img 
+      [class.is-selected]="selectedContactId == contact.id"
+      [src]="contact.img_url" 
+      [alt]="contact.name.first + ' ' + (contact.name.mi || '') + ' ' + contact.name.last">
+    <span>{{ contact.name.first + ' ' + (contact.name.mi || '') + ' ' + contact.name.last }}</span>
   </li>
 </ul>

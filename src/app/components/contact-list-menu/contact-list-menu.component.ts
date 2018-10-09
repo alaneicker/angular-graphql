@@ -20,6 +20,7 @@ export class ContactListMenuComponent implements OnInit {
   setAsSelected(id) {
     this.selection.emit(id);
     this.isOpen = false;
+    return false;
   }
 
 }
