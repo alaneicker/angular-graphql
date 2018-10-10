@@ -6,20 +6,17 @@
         [alt]="selectedContact?.name | fullname">
     </div>
     <div class="contact-list-detail__profile-content">
+
       <h1 class="contact-list-detail__title">
         {{ selectedContact?.name | fullname }}
       </h1>
-      <h2 class="contact-list-detail__sub-title">{{ selectedContact?.job_title }}</h2>
+
+      <h2 class="contact-list-detail__sub-title">
+        {{ selectedContact?.job_title }}
+      </h2>
       
       <div>
-        {{ selectedContact?.address.addr1 }}
-        <ng-container *ngIf="selectedContact?.address.addr2 != ''">
-          {{ selectedContact?.address.addr2_type }}
-          {{ selectedContact?.address.addr2 }},
-        </ng-container>
-        {{ selectedContact?.address.city }},
-        {{ selectedContact?.address.state }}
-        {{ selectedContact?.address.zip }}
+        {{ selectedContact?.address | address }}
       </div>
       
       <div>
@@ -31,7 +28,7 @@
       </div>
 
       <div class="vr">
-          <p class="txt-left">{{ selectedContact?.bio }}</p>
+        <p class="txt-left">{{ selectedContact?.bio }}</p>
       </div>
 
       <hr>

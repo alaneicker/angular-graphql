@@ -18,6 +18,7 @@ import { ContactListDetailComponent } from './components/contact-list-detail/con
 import { SearchComponent } from './components/search/search.component';
 
 import { FullNamePipe } from './pipes/fullname.pipe';
+import { AddressPipe } from './pipes/address.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FullNamePipe } from './pipes/fullname.pipe';
     ContactListDetailComponent,
     SearchComponent,
     FullNamePipe,
+    AddressPipe,
   ],
   imports: [
     BrowserModule,
