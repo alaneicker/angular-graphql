@@ -9,7 +9,7 @@
     <img 
       [class.is-selected]="selectedContactId == contact.id"
       [src]="contact.img_url" 
-      [alt]="contact.name.first + ' ' + (contact.name.mi || '') + ' ' + contact.name.last">
-    <span>{{ contact.name.first + ' ' + (contact.name.mi || '') + ' ' + contact.name.last }}</span>
+      [alt]="contact.name | fullname">
+    <span>{{ contact.name | fullname }}</span>
   </li>
 </ul>

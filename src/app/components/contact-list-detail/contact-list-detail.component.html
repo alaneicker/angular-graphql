@@ -3,15 +3,11 @@
       <img
         class="round"
         [src]="selectedContact?.img_url"
-        [alt]="selectedContact?.name.first + ' ' + selectedContact?.name.last">
+        [alt]="selectedContact?.name | fullname">
     </div>
     <div class="contact-list-detail__profile-content">
       <h1 class="contact-list-detail__title">
-        {{ selectedContact?.name.first }}
-        <ng-container *ngIf="selectedContact?.name.mi != ''">
-          {{ selectedContact?.name.mi }}
-        </ng-container>
-        {{ selectedContact?.name.last }}
+        {{ selectedContact?.name | fullname }}
       </h1>
       <h2 class="contact-list-detail__sub-title">{{ selectedContact?.job_title }}</h2>
       
@@ -58,14 +54,7 @@
     (close)="closeDeleteModal()">
     <ng-container modal-header>
       <span class="txt-medium txt-16 txt-24@medium">
-        Delete 
-        {{ 
-          selectedContact?.name.first 
-          + ' ' 
-          + (selectedContact?.name.mi || '') 
-          + ' ' 
-          + selectedContact?.name.last 
-        }}
+        Delete {{ selectedContact?.name | fullname }}
       </span>
     </ng-container>
     <ng-container modal-body>

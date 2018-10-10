@@ -17,6 +17,8 @@ import { ContactListMenuComponent } from './components/contact-list-menu/contact
 import { ContactListDetailComponent } from './components/contact-list-detail/contact-list-detail.component';
 import { SearchComponent } from './components/search/search.component';
 
+import { FullNamePipe } from './pipes/fullname.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { SearchComponent } from './components/search/search.component';
     ContactListMenuComponent,
     ContactListDetailComponent,
     SearchComponent,
+    FullNamePipe,
   ],
   imports: [
     BrowserModule,
