@@ -1,68 +1,71 @@
 <div class="contact-list-detail">
-    <div class="contact-list-detail__profile-image">
-      <img
-        class="round"
-        [src]="selectedContact?.img_url"
-        [alt]="selectedContact?.name | fullname">
+  <div class="contact-list-detail__profile-image">
+    <img
+      class="round"
+      [src]="selectedContact?.img_url"
+      [alt]="selectedContact?.name | fullname">
+  </div>
+  <div class="contact-list-detail__profile-content">
+
+    <h1 class="contact-list-detail__title">
+      {{ selectedContact?.name | fullname }}
+    </h1>
+
+    <h2 class="contact-list-detail__sub-title">
+      {{ selectedContact?.job_title }}
+    </h2>
+    
+    <div class="contact-list-detail__address">
+      {{ selectedContact?.address | address }}
     </div>
-    <div class="contact-list-detail__profile-content">
+    
+    <div class="contact-list-detail__phone">
+      {{ selectedContact?.phone }}
+    </div>
 
-      <h1 class="contact-list-detail__title">
-        {{ selectedContact?.name | fullname }}
-      </h1>
+    <div class="contact-list-detail__email">
+      <a [href]="'mailto:' + selectedContact?.email">{{ selectedContact?.email }}</a>
+    </div>
 
-      <h2 class="contact-list-detail__sub-title">
-        {{ selectedContact?.job_title }}
-      </h2>
-      
-      <div>
-        {{ selectedContact?.address | address }}
-      </div>
-      
-      <div>
-        {{ selectedContact?.phone }}
-      </div>
+    <div class="vr">
+      <p class="txt-left">{{ selectedContact?.bio }}</p>
+    </div>
 
-      <div>
-        <a [href]="'mailto:' + selectedContact?.email">{{ selectedContact?.email }}</a>
-      </div>
+    <hr>
 
-      <div class="vr">
-        <p class="txt-left">{{ selectedContact?.bio }}</p>
-      </div>
+    <button 
+      class="btn btn--sm"
+      (click)="updateContact(selectedContact)">Update</button>
 
-      <hr>
+    <button 
+      class="btn btn--sm btn--secondary"
+      (click)="openDeleteModal()">Delete</button>
 
+  </div>
+</div>
+
+<app-modal 
+  *ngIf="showDeleteModal"
+  [showCloseBtn]="false"
+  [classes]="'modal--sm'"
+  (close)="closeDeleteModal()">
+
+  <ng-container modal-header>
+    <span class="txt-medium txt-16 txt-24@medium">
+      Delete {{ selectedContact?.name | fullname }}
+    </span>
+  </ng-container>
+
+  <ng-container modal-body>
+    <div class="padding-32 txt-center">
+      <div class="vr-4">Deleting this contact will permanently remove it.</div>
       <button 
         class="btn btn--sm"
-        (click)="updateContact(selectedContact)">Update</button>
-
+        (click)="deleteContact(selectedContact?.id)">I'm Sure</button>
       <button 
         class="btn btn--sm btn--secondary"
-        (click)="openDeleteModal()">Delete</button>
-
+        (click)="closeDeleteModal()">Cancel</button>
     </div>
-  </div>
-
-  <app-modal 
-    *ngIf="showDeleteModal"
-    [showCloseBtn]="false"
-    [classes]="'modal--sm'"
-    (close)="closeDeleteModal()">
-    <ng-container modal-header>
-      <span class="txt-medium txt-16 txt-24@medium">
-        Delete {{ selectedContact?.name | fullname }}
-      </span>
-    </ng-container>
-    <ng-container modal-body>
-      <div class="padding-32 txt-center">
-        <div class="vr-4">Deleting this contact will permanently remove it.</div>
-        <button 
-          class="btn btn--sm"
-          (click)="deleteContact(selectedContact?.id)">I'm Sure</button>
-        <button 
-          class="btn btn--sm btn--secondary"
-          (click)="closeDeleteModal()">Cancel</button>
-      </div>
-    </ng-container>
+  </ng-container>
+  
 </app-modal>
