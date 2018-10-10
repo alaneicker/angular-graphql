@@ -59,11 +59,13 @@
     <ng-container modal-header>
       <span class="txt-medium txt-16 txt-24@medium">
         Delete 
-        {{ selectedContact?.name.first }}
-        <ng-container *ngIf="selectedContact?.name.mi != ''">
-          {{ selectedContact?.name.mi }}
-        </ng-container>
-        {{ selectedContact?.name.last }}?
+        {{ 
+          selectedContact?.name.first 
+          + ' ' 
+          + (selectedContact?.name.mi || '') 
+          + ' ' 
+          + selectedContact?.name.last 
+        }}
       </span>
     </ng-container>
     <ng-container modal-body>

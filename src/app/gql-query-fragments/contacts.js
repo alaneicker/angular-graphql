@@ -26,6 +26,7 @@ export const contactsMenuFragment = `
   name {
     first
     last
+    mi
   }
 `;
 
