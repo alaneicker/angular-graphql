@@ -1,0 +1,12 @@
+.flex--small {
+    display: flex;
+    width: 100%;
+
+    &.flex--hr > * + * {
+        margin-left: rem(16);
+    }
+
+    &.flex--hr-2 > * + * {
+        margin-left: rem(32);
+    }
+}
