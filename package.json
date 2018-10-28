@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "concurrently --kill-others \"npm run start:dev\" \"ng serve --open\""
+    "dev": "concurrently --kill-others \"npm run start:dev\" \"ng serve --open\"",
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
