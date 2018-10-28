@@ -3,13 +3,12 @@ import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/takeUntil';
 
 import { IContact } from '../../interfaces/contact.interface';
-import { QueryService } from '../../services/query.service';
-import { SearchService } from '../../services/search.service';
+import { QueryService } from '../../shared/services/query.service';
+import { SearchService } from '../search/search.service';
 
 import { contactFragment, contactsMenuFragment } from '../../gql-query-fragments/contacts';
 
 @Component({
-  providers: [QueryService, SearchService],
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.scss']
