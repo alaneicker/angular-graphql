@@ -17,8 +17,7 @@ import { ContactListDetailComponent } from './components/contact-list-detail/con
 import { FullNamePipe } from './pipes/fullname.pipe';
 import { AddressPipe } from './pipes/address.pipe';
 
-import { QueryService } from './shared/services/query.service';
-
+import { SharedModule } from './shared/shared.module';
 import { SearchModule } from './components/search/search.module';
 import { AddContactFormModule } from './components/add-contact-form/add-contact-form.module';
 
@@ -32,6 +31,7 @@ import { environment as env } from '../environments/environment';
     HttpLinkModule,
     SearchModule,
     AddContactFormModule,
+    SharedModule.forRoot(),
   ],
   declarations: [
     AppComponent,
@@ -45,7 +45,7 @@ import { environment as env } from '../environments/environment';
     FullNamePipe,
     AddressPipe,
   ],
-  providers: [QueryService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
