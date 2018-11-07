@@ -22,8 +22,11 @@
         background: $gray-6;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         padding: rem(16);
+    }
+  
+    &__head__left {
+      flex: 1;
     }
 
     &__body {
